@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+      body{
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        background-color: purple;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .inUni-wrapper{
+        background-color: white;
+        max-width: 500px;
+        width: 45%;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 0px;
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        margin-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .inUni-wrapper h1{
+        width: 90%;
+        text-align: center;
+        font-size: 22px;
+      }
+      .inUni-wrapper p{
+        width: 90%;
+        text-align: center;
+        font-size: 12px;
+      }
+      .inUni-wrapperr h1{
+        width: 90%;
+        text-align: center;
+        font-size: 22px;
+      }
+      .inUni-wrapperr p{
+        width: 90%;
+        text-align: center;
+        font-size: 12px;
+      }
+      .inUni-wrapperr{
+        background-color: white;
+        max-width: 500px;
+        width: 45%;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 0px;
+        position: absolute;
+        margin-left: 20px;
+        top: 30%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      button{
+        background-color: purple;
+        color: white;
+        font-size: 10px;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      button:hover{
+        transform: scale(0.9);
+      }
+      p{
+        width: 400px;
+        text-align: center;
+        font-size: 10px;
+      }
+      .hide{
+        opacity: 0;
+        pointer-events: none;
+      }
+      .show{
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .header-wrapper{
+        width: 100%;
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 17% 17% 17% 17% 17% 17%;
+
+      }
+      .about-wrapper{
+        z-index: 1;
+        display: inline-block;
+      }
+      .about-button{
+        width: 100%;
+      }
+    </style>
+    <body>
+      <div class="header-wrapper">
+        <div class="about-wrapper">
+          <a href="https://inuni4.github.io/inUni5/uni-about.html" ><button class="about-button">About</button></a>
+        </div>
+        <div class="about-wrapper">
+          <a href="https://inuni4.github.io/inUni5/uni-contact.html"><button class="contact-button">Contact</button></a>
+        </div>
+        <div class="about-wrapper">
+          <a href="https://inuni4.github.io/inUni6/webinfo-uni.html"><button class="creator-button">Website info</button></a>
+        </div>
+        <div class="about-wrapper">
+          <a href="https://inuni4.github.io/testUni5/open-uni.html"><button class="uni-button">Open Unies</button></a>
+        </div>
+        <div class="about-wrapper">
+          <a href="https://8jc4xf26-3000.euw.devtunnels.ms/"><button class="uni-button">Register</button></a>
+        </div>
+        
+      </div>
+      <div class="inUni-wrapper">
+        <h1>Welcome to inUni</h1>
+        <p>Where your future is guaranteed!</p>
+        <p id="inUni-content">Are you here to check which courses you qualify for?</p>
+        <p id="steps-Content"></p>
+        <p id="steps-Content1"></p>
+        <div>
+          <button id="varsity-button">Yes</button>
+        </div>
+      </div>
+      <div class="inUni-wrapperr">
+        <p id="steps-Content2"></p>
+        <p id="steps-Content3"></p>
+        <p id="steps-Content4"></p>
+        <p id="steps-Content5"></p>
+        <div>
+          <button id="done-button">Done</button>
+        </div>
+      </div>
+      <script>
+        const inUniWrapper = document.querySelector('.inUni-wrapper');
+        const inUniWrapperr = document.querySelector('.inUni-wrapperr');
+        const varsityBtn = document.querySelector('#varsity-button');
+        const collegeBtn = document.querySelector('#college-button');
+        const backBtn = document.querySelector('#back-button');
+        const backBtn1 = document.querySelector('#back-button1');
+        const backBtn2 = document.querySelector('#back-button2');
+        const nextBtn = document.querySelector('#next-button');
+        const nextBtn1 = document.querySelector('#next-button1');
+        const doneBtn = document.querySelector('#done-button');
+        const inUniContent = document.querySelector('#inUni-content');
+        const stepsContent = document.querySelector('#steps-Content');
+        const stepsContent1 = document.querySelector('#steps-Content1');
+        const stepsContent2 = document.querySelector('#steps-Content2');
+        const stepsContent3 = document.querySelector('#steps-Content3');
+        const stepsContent4 = document.querySelector('#steps-Content4');
+        const stepsContent5 = document.querySelector('#steps-Content5');
+
+        varsityBtn.addEventListener('click', () => {
+          inUniWrapperr.classList.remove('hide');
+          varsityBtn.classList.add('hide');
+          doneBtn.classList.remove('hide');
+          inUniContent.textContent = `Please note that this is only a Demo version or a Free trial but to access the premium version you have to register.`;
+          stepsContent.textContent = `In the premium version you can check which courses you qualify for in over 8 universities.`;
+         stepsContent1.textContent = `You can also check which universities are open all over South Africa.`;
+         stepsContent2.textContent = `In order to register you have to click the register column above.`;
+         stepsContent3.textContent = `You can also win free 1GB of data to help you with applications.`;
+         stepsContent4.textContent = `In order to win the free data you will have to play a snake game and reach 100 points easy right?`;
+         stepsContent5.textContent = `Good Luck!`;
+        });
+        doneBtn.addEventListener('click', () => {
+          inUniWrapperr.classList.add('hide');
+          doneBtn.classList.add('hide');
+          varsityBtn.classList.remove('hide');
+          inUniContent.textContent = `Are you here to check which courses you qualify for?`;
+          stepsContent.textContent = '';
+          stepsContent1.textContent = '';
+        });
+
+        window.onload = () => {
+          inUniWrapperr.classList.add('hide');
+          doneBtn.classList.add('hide');
+        };
+      </script>
+    </body>
+  </head>
+</html>
