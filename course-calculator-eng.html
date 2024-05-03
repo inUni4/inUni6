@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+      }
+      .course-wrapper{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper1{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper h1{
+        font-size: 24px;
+      }
+      input{
+        width: 90%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        margin: 6px;
+      }
+      button{
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover{
+        transform: scale(0.9);
+      }
+      p{
+        font-size: 12px;
+      }
+      .hide{
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="course-wrapper">
+      <h1>Course Calculator</h1>
+      <input type="text" placeholder="English%" class="english-input">
+      <input type="text" placeholder="Mathematics%" class="math-input">
+      <input type="text" placeholder="Aps Score" class="aps-score">
+      <button class="calculate-button">Calculate</button>
+    </div>
+    <div class="course-wrapper1">
+      <p class="result-text"></p>
+      <p class="result-text1"></p>
+      <p class="result-text2"></p>
+      <p class="result-text3"></p>
+      <p class="result-text4"></p>
+      <p class="result-text5"></p>
+      <p class="result-text6"></p>
+      <p class="result-text7"></p>
+      <p class="result-text8"></p>
+      <p class="result-text9"></p>
+      <p class="result-text10"></p>
+      <div>
+        <button class="next-button">1</button>
+        <button class="next-button1">2</button>
+        <button class="next-button2">3</button>
+        <button class="next-button3">4</button>
+        <button class="next-button4">5</button>
+      </div>
+      
+    </div>
+    <script>
+      const englishInput = document.querySelector('.english-input');
+      const mathInput = document.querySelector('.math-input');
+      const physicsInput = document.querySelector('.physics-input');
+      const lifescienceInput = document.querySelector('.lifescience-input');
+      const apsScore = document.querySelector('.aps-score');
+      const calculateBtn = document.querySelector('.calculate-button');
+      const resultText = document.querySelector('.result-text');
+      const resultText1 = document.querySelector('.result-text1');
+      const resultText2 = document.querySelector('.result-text2');
+      const resultText3 = document.querySelector('.result-text3');
+      const resultText4 = document.querySelector('.result-text4');
+      const resultText5 = document.querySelector('.result-text5');
+      const resultText6 = document.querySelector('.result-text6');
+      const resultText7 = document.querySelector('.result-text7');
+      const resultText8 = document.querySelector('.result-text8');
+      const resultText9 = document.querySelector('.result-text9');
+      const resultText10 = document.querySelector('.result-text10');
+      const nextBtn = document.querySelector('.next-button');
+      const nextBtn1 = document.querySelector('.next-button1');
+      const nextBtn2 = document.querySelector('.next-button2');
+      const nextBtn3 = document.querySelector('.next-button3');
+      const nextBtn4 = document.querySelector('.next-button4');
+      const nextBtn5 = document.querySelector('.next-button5');
+      const courseWrapper = document.querySelector('.course-wrapper');
+      const courseWrapper1 = document.querySelector('.course-wrapper1');
+
+      calculateBtn.addEventListener('click', () => {
+        courseWrapper.classList.add('hide');
+        courseWrapper1.classList.remove('hide');
+
+        if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value == 18) {
+          resultText.textContent = 'Dip (Jewellery Design and Manufacture)';
+          resultText1.textContent = '';
+          resultText2.textContent = '';
+          resultText3.textContent = '';
+          resultText4.textContent = '';
+          resultText5.textContent = '';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value == 19) {
+          resultText.textContent = 'Dip (Small Business Management) (Extended)';
+          resultText1.textContent = 'Dip (People Management) (Extended)';
+          resultText2.textContent = 'Dip (Jewellery Design and Manufacture)';
+          resultText3.textContent = 'Dip (Management Services)';
+          resultText4.textContent = '';
+          resultText5.textContent = '';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText1.textContent = 'Dip (People Management) (Extended)';
+            resultText2.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText3.textContent = 'Dip (Management Services)';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value == 20) {
+          resultText.textContent = 'Dip (Fashion Production)';
+          resultText1.textContent = 'Dip (Operations Management)';
+          resultText2.textContent = 'Dip (Jewellery Design and Manufacture)';
+          resultText3.textContent = 'Dip (Small Business Management) (Extended)';
+          resultText4.textContent = 'Dip (People Management) (Extended)';
+          resultText5.textContent = 'Dip (Management Services)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Fashion Production)';
+            resultText1.textContent = 'Dip (Operations Management)';
+            resultText2.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText3.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText4.textContent = 'Dip (People Management) (Extended)';
+            resultText5.textContent = 'Dip (Management Services)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value == 21) {
+          resultText.textContent = 'Dip (Sport Management)';
+          resultText1.textContent = 'Dip (Fashion Production)';
+          resultText2.textContent = 'Dip (Operations Management)';
+          resultText3.textContent = 'Dip (Jewellery Design and Manufacture)';
+          resultText4.textContent = 'Dip (Small Business Management) (Extended)';
+          resultText5.textContent = 'Dip (People Management) (Extended)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Sport Management)';
+            resultText1.textContent = 'Dip (Fashion Production)';
+            resultText2.textContent = 'Dip (Operations Management)';
+            resultText3.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText4.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText5.textContent = 'Dip (People Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value == 22) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (People Management) (Extended)';
+            resultText1.textContent = 'Dip (Retail Business Management)';
+            resultText2.textContent = 'Dip (Small Business Management)';
+            resultText3.textContent = 'Dip (Tourism Management)';
+            resultText4.textContent = 'Dip (Logistics) (Extended)';
+            resultText5.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value == 23) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (People Management) (Extended)';
+            resultText1.textContent = 'Dip (Retail Business Management)';
+            resultText2.textContent = 'Dip (Small Business Management)';
+            resultText3.textContent = 'Dip (Tourism Management)';
+            resultText4.textContent = 'Dip (Logistics) (Extended)';
+            resultText5.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'BA (Visual Art)';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } /*else if(englishInput.value >= 50 && mathInput.value >= 50 && apsScore.value == 23) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (People Management) (Extended)';
+            resultText1.textContent = 'Dip (Retail Business Management)';
+            resultText2.textContent = 'Dip (Small Business Management)';
+            resultText3.textContent = 'Dip (Tourism Management)';
+            resultText4.textContent = 'Dip (Logistics) (Extended)';
+            resultText5.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Architecture)';
+            resultText1.textContent = 'BA Design (Industrial Design)';
+            resultText2.textContent = 'BA Design (Interior Design)';
+            resultText3.textContent = 'BA Design (Fashion Design)';
+            resultText4.textContent = 'BA (Visual Art)';
+            resultText5.textContent = 'BCom (Sport Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } */else if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value == 24) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (People Management) (Extended)';
+            resultText1.textContent = 'Dip (Retail Business Management)';
+            resultText2.textContent = 'Dip (Small Business Management)';
+            resultText3.textContent = 'Dip (Tourism Management)';
+            resultText4.textContent = 'Dip (Logistics) (Extended)';
+            resultText5.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Logistics)';
+            resultText1.textContent = 'Dip (Transportation Management)';
+            resultText2.textContent = 'BA (Visual Art)';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 50 && apsScore.value == 26) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = 'Dip (People Management) (Extended)';
+            resultText7.textContent = 'Dip (Retail Business Management)';
+            resultText8.textContent = 'Dip (Small Business Management)';
+            resultText9.textContent = 'Dip (Tourism Management)';
+            resultText10.textContent = 'Dip (Logistics) (Extended)';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText1.textContent = 'Dip (Logistics)';
+            resultText2.textContent = 'Dip (Transportation Management)';
+            resultText3.textContent = 'Dip (Architecture)';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Interior Design)';
+            resultText1.textContent = 'BA Design (Fashion Design)';
+            resultText2.textContent = 'BCom (Sport Management)';
+            resultText3.textContent = 'BCom (Accounting) (Extended)';
+            resultText4.textContent = 'BCom (Economics and Econometrics) (Extended)';
+            resultText5.textContent = 'BCom (Marketing Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = 'BCom (Business Management)';
+            resultText1.textContent = 'BCom (Entrepreneurial Management)';
+            resultText2.textContent = 'BCom (Industrial Phsycology)';
+            resultText3.textContent = 'BCom (Information Management)';
+            resultText4.textContent = 'BCom (Information Systems)';
+            resultText5.textContent = 'BA Design (Industrial Design)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Fashion Design)';
+            resultText1.textContent = 'BA Design (Interior Design)';
+            resultText2.textContent = 'BA (Visual Art)';
+            resultText3.textContent = 'BCom (Sport Management)';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 50 && apsScore.value > 27 && apsScore.value < 30) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (People Management) (Extended)';
+            resultText1.textContent = 'Dip (Retail Business Management)';
+            resultText2.textContent = 'Dip (Small Business Management)';
+            resultText3.textContent = 'Dip (Tourism Management)';
+            resultText4.textContent = 'Dip (Logistics) (Extended)';
+            resultText5.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Logistics)';
+            resultText1.textContent = 'Dip (Transportation Management)';
+            resultText2.textContent = 'Dip (Architecture)';
+            resultText3.textContent = 'BCom (Finance)';
+            resultText4.textContent = 'BCom (Economics and Econometrics)';
+            resultText5.textContent = 'BCom (Marketing Management)';
+            resultText6.textContent = 'BCom (Accounting)';
+            resultText7.textContent = 'BCom (Business Management)';
+            resultText8.textContent = 'BCom (Entrepreneurial Management)';
+            resultText9.textContent = 'BCom (Industrial Phsycology)';
+            resultText10.textContent = 'BCom (Information Management)';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = 'BCom (Information Systems)';
+            resultText1.textContent = 'BCom (Sport Management)';
+            resultText2.textContent = 'BA Design (Industrial Design)';
+            resultText3.textContent = 'BA Design (Fashion Design)';
+            resultText4.textContent = 'BA Design (Interior Design)';
+            resultText5.textContent = 'BA (Visual Art)';
+            resultText6.textContent = `Bachelor's Degree (Human Resource Management)`;
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 40 && apsScore.value >= 25) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (People Management) (Extended)';
+            resultText1.textContent = 'Dip (Retail Business Management)';
+            resultText2.textContent = 'Dip (Small Business Management)';
+            resultText3.textContent = 'Dip (Tourism Management)';
+            resultText4.textContent = 'Dip (Logistics) (Extended)';
+            resultText5.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Logistics)';
+            resultText1.textContent = 'Dip (Transportation Management)';
+            resultText2.textContent = 'BA (Visual Art)';
+            resultText3.textContent = 'BCom (Accounting) (Extended)';
+            resultText4.textContent = 'BCom (Business Management) (Extended)';
+            resultText5.textContent = 'BCom (Economics and Econometrics) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = 'BCom (Finance) (Extended)';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 40 && mathInput.value >= 40 && apsScore.value == 21) {
+          resultText.textContent = 'Dip (Sport Management)';
+          resultText1.textContent = '';
+          resultText2.textContent = '';
+          resultText3.textContent = '';
+          resultText4.textContent = '';
+          resultText5.textContent = '';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Sport Management)';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 60 && mathInput.value >= 50 && apsScore.value == 31) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = 'Dip (Logistics)';
+          resultText7.textContent = 'Dip (Public Relations and Communication)';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = 'Dip (Logistics)';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = 'Dip (People Management) (Extended)';
+            resultText7.textContent = 'Dip (Retail Business Management)';
+            resultText8.textContent = 'Dip (Small Business Management)';
+            resultText9.textContent = 'Dip (Tourism Management)';
+            resultText10.textContent = 'Dip (Logistics) (Extended)';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText1.textContent = '';
+            resultText2.textContent = 'Dip (Logistics)';
+            resultText3.textContent = 'Dip (Transportation Management)';
+            resultText4.textContent = 'Dip (Architecture)';
+            resultText5.textContent = `Bachelor's Degree (Hospitality Management)`;
+            resultText6.textContent = `Bachelor's Degree (Tourism Development and Management)`;
+            resultText7.textContent = 'BA (Public Management and Governance)';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = 'BCom (Finance)';
+            resultText4.textContent = 'BCom (Economics and Econometrics)';
+            resultText5.textContent = 'BCom (Marketing Management)';
+            resultText6.textContent = 'BCom (Business Management)';
+            resultText7.textContent = 'BCom (Entrepreneurial Management)';
+            resultText8.textContent = 'BCom (Industrial Phsycology)';
+            resultText9.textContent = 'BCom (Information Management)';
+            resultText10.textContent = 'BCom (Information Systems)';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Industrial Design)';
+            resultText1.textContent = 'Bachelor of Biokinetics';
+            resultText2.textContent = 'BCom (Law)';
+            resultText3.textContent = 'BA';
+            resultText4.textContent = 'BA with specialisation in Language Practise';
+            resultText5.textContent = 'BA (Community Development and Leadership)';
+            resultText6.textContent = 'BA with specialisation in Politics, Economics and Technology';
+            resultText7.textContent = 'BCom (Transportation and Logistics Management)';
+            resultText8.textContent = 'BA (Law)';
+            resultText9.textContent = 'B Degree LLB';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Fashion Design)';
+            resultText1.textContent = 'BA Design (Interior Design)';
+            resultText2.textContent = 'BA (Visual Art)';
+            resultText3.textContent = 'BCom (Sport Management)';
+            resultText4.textContent = `Bachelor's Degree (Human Resource Management)`;
+            resultText5.textContent = 'BCom (Accounting)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 50 && mathInput.value >= 60 && apsScore.value == 33) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = 'Dip (Logistics)';
+          resultText7.textContent = 'Dip (Public Relations and Communication)';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = 'Dip (Logistics)';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = 'Dip (People Management) (Extended)';
+            resultText7.textContent = 'Dip (Retail Business Management)';
+            resultText8.textContent = 'Dip (Small Business Management)';
+            resultText9.textContent = 'Dip (Tourism Management)';
+            resultText10.textContent = 'Dip (Logistics) (Extended)';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText1.textContent = 'Dip (Logistics)';
+            resultText2.textContent = 'Dip (Transportation Management)';
+            resultText3.textContent = 'Dip (Architecture)';
+            resultText4.textContent = `Bachelor's Degree (Hospitality Management)`;
+            resultText5.textContent = `Bachelor's Degree (Tourism Development and Management)`;
+            resultText6.textContent = 'BA (Public Management and Governance)';
+            resultText7.textContent = `Bachelor's Degree (Accounting) (CA)`;
+            resultText8.textContent = 'BCom (Accounting)';
+            resultText9.textContent = 'BCom (Sport Management)';
+            resultText10.textContent = 'BCom (Transportation and Logistics Management)';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'BCom (Law)';
+            resultText1.textContent = 'BCom (Finance)';
+            resultText2.textContent = 'BCom (Economics and Econometrics)';
+            resultText3.textContent = 'BCom (Marketing Management)';
+            resultText4.textContent = 'BCom (Business Management)';
+            resultText5.textContent = 'BCom (Entrepreneurial Management)';
+            resultText6.textContent = 'BCom (Industrial Phsycology)';
+            resultText7.textContent = 'BCom (Information Management)';
+            resultText8.textContent = 'BCom (Information Systems)';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Industrial Design)';
+            resultText1.textContent = 'Bachelor of Biokinetics';
+            resultText2.textContent = 'BA';
+            resultText3.textContent = 'BA with specialisation in Language Practise';
+            resultText4.textContent = 'BA (Community Development and Leadership)';
+            resultText5.textContent = 'BA with specialisation in Politics, Economics and Technology';
+            resultText6.textContent = 'B Degree LLB';
+            resultText7.textContent = 'BA (Law)';
+            resultText8.textContent = 'BA Design (Interior Design)';
+            resultText9.textContent = 'BA Design (Fashion Design)';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Fashion Design)';
+            resultText1.textContent = 'BA Design (Interior Design)';
+            resultText2.textContent = 'BA (Visual Art)';
+            resultText3.textContent = `Bachelor's Degree (Human Resource Management)`;
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 60 && mathInput.value >= 80 && apsScore.value >= 34) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = 'Dip (Logistics)';
+          resultText7.textContent = 'Dip (Public Relations and Communication)';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = 'Dip (Logistics)';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = 'Dip (People Management) (Extended)';
+            resultText7.textContent = 'Dip (Retail Business Management)';
+            resultText8.textContent = 'Dip (Small Business Management)';
+            resultText9.textContent = 'Dip (Tourism Management)';
+            resultText10.textContent = 'Dip (Logistics) (Extended)';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText1.textContent = 'Dip (Architecture)';
+            resultText2.textContent = 'Dip (Logistics)';
+            resultText3.textContent = 'Dip (Transportation Management)';
+            resultText4.textContent = 'Bachelor of Science in Mathematical Science (Actuarial Science)';
+            resultText5.textContent = `Bachelor's Degree (Hospitality Management)`;
+            resultText6.textContent = `Bachelor's Degree (Tourism Development and Management)`;
+            resultText7.textContent = 'BA (Public Management and Governance)';
+            resultText8.textContent = 'Bachelor of Science in IT (Computer Science and Informatics Specialising in AI)';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = `Bachelor's Degree (Accounting) (CA)`;
+            resultText1.textContent = 'BCom (Finance)';
+            resultText2.textContent = 'BCom (Economics and Econometrics)';
+            resultText3.textContent = 'BCom (Marketing Management)';
+            resultText4.textContent = 'BCom (Information Systems)';
+            resultText5.textContent = 'BCom (Information Management)';
+            resultText6.textContent = 'BCom (Business Management)';
+            resultText7.textContent = 'BCom (Entrepreneurial Management)';
+            resultText8.textContent = 'BCom (Industrial Phsycology)';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Industrial Design)';
+            resultText1.textContent = 'Bachelor of Biokinetics';
+            resultText2.textContent = 'BCom (Law)';
+            resultText3.textContent = 'BA';
+            resultText4.textContent = 'BA with specialisation in Language Practise';
+            resultText5.textContent = 'BA (Community Development and Leadership)';
+            resultText6.textContent = 'BA with specialisation in Politics, Economics and Technology';
+            resultText7.textContent = 'BCom (Transportation and Logistics Management)';
+            resultText8.textContent = 'BA (Law)';
+            resultText9.textContent = 'B Degree LLB';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = 'BA Design (Fashion Design)';
+            resultText1.textContent = 'BA Design (Interior Design)';
+            resultText2.textContent = 'BA (Visual Art)';
+            resultText3.textContent = 'BCom (Sport Management)';
+            resultText4.textContent = `Bachelor's Degree (Human Resource Management)`;
+            resultText5.textContent = 'BCom (Accounting)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if(englishInput.value >= 60 && mathInput.value >= 40 && apsScore.value == 25) {
+          resultText.textContent = 'Dip (Accountancy)';
+          resultText1.textContent = 'Dip (Business Information Technology)';
+          resultText2.textContent = 'Dip ( Financial Services Operations)';
+          resultText3.textContent = 'Dip (Food and Beverage Operations)';
+          resultText4.textContent = 'Dip (Marketing)';
+          resultText5.textContent = 'Dip (People Management)';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Accountancy)';
+            resultText1.textContent = 'Dip (Business Information Technology)';
+            resultText2.textContent = 'Dip ( Financial Services Operations)';
+            resultText3.textContent = 'Dip (Food and Beverage Operations)';
+            resultText4.textContent = 'Dip (Marketing)';
+            resultText5.textContent = 'Dip (People Management)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Dip (Management Services)';
+            resultText1.textContent = 'Dip (Sport Management)';
+            resultText2.textContent = 'Dip (Fashion Production)';
+            resultText3.textContent = 'Dip (Operations Management)';
+            resultText4.textContent = 'Dip (Jewellery Design and Manufacture)';
+            resultText5.textContent = 'Dip (Small Business Management) (Extended)';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Dip (People Management) (Extended)';
+            resultText1.textContent = 'Dip (Retail Business Management)';
+            resultText2.textContent = 'Dip (Small Business Management)';
+            resultText3.textContent = 'Dip (Tourism Management)';
+            resultText4.textContent = 'Dip (Logistics) (Extended)';
+            resultText5.textContent = 'Dip (Transportation Management) (Extended)';
+            resultText6.textContent = 'Dip (Public Relations and Communication)';
+            resultText7.textContent = 'Dip (Logistics)';
+            resultText8.textContent = 'Dip (Transportation Management)';
+            resultText9.textContent = 'BA with specialisation in Language Practise';
+            resultText10.textContent = 'BA (Community Development and Leadership)';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = 'BA (Law)';
+            resultText1.textContent = 'B Degree LLB';
+            resultText2.textContent = 'BA (Visual Art)';
+            resultText3.textContent = 'BCom (Accounting) (Extended)';
+            resultText4.textContent = 'BCom (Business Management) (Extended)';
+            resultText5.textContent = 'BCom (Economics and Econometrics) (Extended)';
+            resultText6.textContent = 'BCom (Finance) (Extended)';
+            resultText7.textContent = `Bachelor's Degree (Hospitality Management)`;
+            resultText8.textContent = `Bachelor's Degree (Tourism Development and Management)`;
+            resultText9.textContent = 'BA (Public Management and Governance)';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        }
+        
+      });
+
+      window.onload = () => {
+        courseWrapper1.classList.add('hide');
+      };
+    </script>
+  </body>
+</html>

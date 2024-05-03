@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      body{
+        font-family: Arial;
+        background-color: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .header-wrapper{
+        background-color: white;
+        color: purple;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        width: 100%;
+        transition: all 0.3s ease;
+        z-index: 1;
+      }
+      .header-wrapper h1{
+        font-size: 23px;
+        margin-left: 6px;
+      }
+      .info-wrapper{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        width: 60%;
+        max-width: 500px;
+        padding: 12px; 
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 10%;
+      }
+      .uni-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .info-wrapper div{
+        margin: 6px;
+      }
+      .uni-logo{
+        width: 80%;
+        border-radius: 6px;
+        margin: 6px;
+        margin-left: 5%;
+        cursor: pointer;
+      }
+      .uni-name{
+        font-size: 12px;
+        font-weight: bold;
+        margin: 6px;
+      }
+      button{
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-weight: bold;
+        background-color: purple;
+        color: white;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover{
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <h1>inUni</h1>
+    </div>
+    <div class="info-wrapper">
+        <div class="uni-wrapper">
+          <p class="uni-logo"></p>
+          <p class="uni-name">welcome!</p>
+        </div>
+      
+      <div>
+        <button class="back-button"><</button>
+        <button class="next-button">></button>
+      </div>
+    </div>
+
+    <script>
+      const uniLogo = document.querySelector('.uni-logo');
+      const uniName = document.querySelector('.uni-name');
+      const backButton = document.querySelector('.back-button');
+      const nextButton = document.querySelector('.next-button');
+      const openUnies = [
+        {
+          uni : `<a href="https://inuni4.github.io/inUniHome/smu-homepage.html"><img src="smu-logo.png" class="uni-logo"></a>`,
+        unititle : 'Sefako Makgatho Health Sciences University'
+      },
+      {
+        uni : `<a href="https://inuni4.github.io/inUniHome/spu-homepage.html"><img src="spu-logo.png" class="uni-logo"></a>`,
+        unititle : 'Sol Plaatje University'
+      },
+      {
+        uni : `<a href="https://inuni4.github.io/inUniHome/uj-homepage.html"><img src="uj-logo.png" class="uni-logo"></a>`,
+        unititle : 'University of Johannesburg'
+      },
+      {
+        uni : `<a href="https://inuni4.github.io/inUniHome/vut-homepage.html"><img src="vut.jpg" class="uni-logo"></a>`,
+        unititle : 'Vaal University of Technology'
+      },
+      {
+        uni : `<a href="https://inuni4.github.io/inUniHome/wits-homepage.html"><img src="wits-logo.png" class="uni-logo"></a>`,
+        unititle : 'University OF THE WITWATERSRAND JOHANNESBURG'
+      },
+      {
+        uni : `<a href="https://inuni4.github.io/inUniHome/cput-homepage.html">
+          <img src="cput-logo.png" class="uni-logo">
+          </a>`,
+        unititle : 'Cape Peninsula University of Technology'
+      },
+      {
+        uni : `<a href="https://inuni4.github.io/inUniHome/fh-homepage.html"><img src="fort-hare-logo.svg" class="uni-logo"></a>`,
+        unititle : 'University Of Fort Hare'
+      }
+    ];
+    let randomUni = openUnies[Math.floor(Math.random() * openUnies.length)];
+    let randomUnilogo = randomUni.uni;
+    let randomUnititle = randomUni.unititle;
+
+    backButton.addEventListener('click', () => {
+      randomUni = openUnies[Math.floor(Math.random() * openUnies.length)];
+
+      randomUnilogo = randomUni.uni;
+      randomUnititle = randomUni.unititle;
+
+      uniLogo.innerHTML = randomUnilogo;
+      uniName.innerHTML = randomUnititle;
+    });
+    nextButton.addEventListener('click', () => {
+      randomUni = openUnies[Math.floor(Math.random() * openUnies.length)];
+
+      randomUnilogo = randomUni.uni;
+      randomUnititle = randomUni.unititle;
+
+      uniLogo.innerHTML = randomUnilogo;
+      uniName.innerHTML = randomUnititle;
+    });
+    </script>
+  </body>
+</html>

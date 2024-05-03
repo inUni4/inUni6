@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+      }
+      .course-wrapper{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper1{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper h1{
+        font-size: 24px;
+      }
+      input{
+        width: 90%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        margin: 6px;
+      }
+      button{
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover{
+        transform: scale(0.9);
+      }
+      p{
+        font-size: 12px;
+      }
+      .hide{
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="course-wrapper">
+      <h1>Course Calculator</h1>
+      <input type="text" placeholder="English%" class="english-input">
+      <input type="text" placeholder="Mathematics%" class="math-input">
+      <input type="text" placeholder="Agriculture%" class="agriculture-input">
+      <input type="text" placeholder="Life Science%" class="lifescience-input">
+      <input type="text" placeholder="Aps Score" class="aps-score">
+      <button class="calculate-button">Calculate</button>
+    </div>
+    <div class="course-wrapper1">
+      <p class="result-text"></p>
+      <p class="result-text1"></p>
+      <p class="result-text2"></p>
+      <p class="result-text3"></p>
+      <p class="result-text4"></p>
+      <p class="result-text5"></p>
+      <p class="result-text6"></p>
+      <p class="result-text7"></p>
+      <p class="result-text8"></p>
+      <p class="result-text9"></p>
+      <p class="result-text10"></p>
+      <div>
+        <button class="next-button">1</button>
+        <button class="next-button1">2</button>
+        <button class="next-button2">3</button>
+        <button class="next-button3">4</button>
+        <button class="next-button4">5</button>
+      </div>
+      
+    </div>
+    <script>
+      const englishInput = document.querySelector('.english-input');
+      const mathInput = document.querySelector('.math-input');
+      const lifeorientationInput = document.querySelector('.lifeorientation-input');
+      const lifescienceInput = document.querySelector('.lifescience-input');
+      const agricultureInput = document.querySelector('.agriculture-input');
+      const apsScore = document.querySelector('.aps-score');
+      const calculateBtn = document.querySelector('.calculate-button');
+      const resultText = document.querySelector('.result-text');
+      const resultText1 = document.querySelector('.result-text1');
+      const resultText2 = document.querySelector('.result-text2');
+      const resultText3 = document.querySelector('.result-text3');
+      const resultText4 = document.querySelector('.result-text4');
+      const resultText5 = document.querySelector('.result-text5');
+      const resultText6 = document.querySelector('.result-text6');
+      const resultText7 = document.querySelector('.result-text7');
+      const resultText8 = document.querySelector('.result-text8');
+      const resultText9 = document.querySelector('.result-text9');
+      const resultText10 = document.querySelector('.result-text10');
+      const nextBtn = document.querySelector('.next-button');
+      const nextBtn1 = document.querySelector('.next-button1');
+      const nextBtn2 = document.querySelector('.next-button2');
+      const nextBtn3 = document.querySelector('.next-button3');
+      const nextBtn4 = document.querySelector('.next-button4');
+      const nextBtn5 = document.querySelector('.next-button5');
+      const courseWrapper = document.querySelector('.course-wrapper');
+      const courseWrapper1 = document.querySelector('.course-wrapper1');
+
+      calculateBtn.addEventListener('click', () => {
+        courseWrapper.classList.add('hide');
+        courseWrapper1.classList.remove('hide');
+
+        if (englishInput.value >= 50 && lifeorientationInput.value >= 50 && apsScore.value == 22) {
+          resultText.textContent = 'Diploma in Fine Art';
+          resultText1.textContent = '';
+          resultText2.textContent = '';
+          resultText3.textContent = '';
+          resultText4.textContent = '';
+          resultText5.textContent = '';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Diploma in Fine Art';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if (englishInput.value >= 50 && mathInput.value >= 30 && lifeorientationInput.value >= 50 && apsScore.value == 26) {
+          resultText.textContent = 'Diploma in Fine Art';
+          resultText1.textContent = 'Bachelor of Arts (Extended Programme)';
+          resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+          resultText3.textContent = 'Bachelor of Law (Extended Programme)';
+          resultText4.textContent = 'Bachelor of Administration in Public Administration';
+          resultText5.textContent = '';
+          resultText6.textContent = '';
+          resultText7.textContent = '';
+          resultText8.textContent = '';
+          resultText9.textContent = '';
+          resultText10.textContent = '';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Diploma in Fine Art';
+            resultText1.textContent = 'Bachelor of Arts (Extended Programme)';
+            resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+            resultText3.textContent = 'Bachelor of Law (Extended Programme)';
+            resultText4.textContent = 'Bachelor of Administration in Public Administration';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if (englishInput.value >= 50 && mathInput.value >= 50 && lifescienceInput.value >= 40 && agricultureInput.value >= 50 && lifeorientationInput.value >= 50 && apsScore.value == 27) {
+          resultText.textContent = 'Diploma in Fine Art';
+          resultText1.textContent = 'Bachelor of Arts';
+          resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+          resultText3.textContent = 'Bachelor of Fine Art';
+          resultText4.textContent = 'Bachelor of Lib and Info Science';
+          resultText5.textContent = 'Bachelor of Music';
+          resultText6.textContent = 'Bachelor of Social Science';
+          resultText7.textContent = 'Bachelor of Social Science in Communication';
+          resultText8.textContent = 'Bachelor of Social Science in Human Settlement';
+          resultText9.textContent = 'Bachelor of Social Work';
+          resultText10.textContent = 'Bachelor of Theology';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Diploma in Fine Art';
+            resultText1.textContent = 'Bachelor of Arts';
+            resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+            resultText3.textContent = 'Bachelor of Fine Art';
+            resultText4.textContent = 'Bachelor of Lib and Info Science';
+            resultText5.textContent = 'Bachelor of Music';
+            resultText6.textContent = 'Bachelor of Social Science';
+            resultText7.textContent = 'Bachelor of Social Science in Communication';
+            resultText8.textContent = 'Bachelor of Social Science in Human Settlement';
+            resultText9.textContent = 'Bachelor of Social Work';
+            resultText10.textContent = 'Bachelor of Theology';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Bachelor of Law (Extended Programme)';
+            resultText1.textContent = 'Bachelor of Administration in Public Administration';
+            resultText2.textContent = 'Bachelor of Commerce (Extended Programme)';
+            resultText3.textContent = 'Bachelor of Commerce in Information Systems (Extended Programme)';
+            resultText4.textContent = 'Bachelor of Science in Agriculture in Agricultural Economics (Extended Programme)';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if (englishInput.value >= 50 && mathInput.value >= 50 && lifescienceInput.value >= 50 && agricultureInput.value >= 50 && lifeorientationInput.value >= 50 && apsScore.value > 27 && apsScore.value < 30) {
+          resultText.textContent = 'Diploma in Fine Art';
+          resultText1.textContent = 'Bachelor of Arts';
+          resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+          resultText3.textContent = 'Bachelor of Fine Art';
+          resultText4.textContent = 'Bachelor of Lib and Info Science';
+          resultText5.textContent = 'Bachelor of Music';
+          resultText6.textContent = 'Bachelor of Social Science';
+          resultText7.textContent = 'Bachelor of Social Science in Communication';
+          resultText8.textContent = 'Bachelor of Social Science in Human Settlement';
+          resultText9.textContent = 'Bachelor of Social Work';
+          resultText10.textContent = 'Bachelor of Theology';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Diploma in Fine Art';
+            resultText1.textContent = 'Bachelor of Arts';
+            resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+            resultText3.textContent = 'Bachelor of Fine Art';
+            resultText4.textContent = 'Bachelor of Lib and Info Science';
+            resultText5.textContent = 'Bachelor of Music';
+            resultText6.textContent = 'Bachelor of Social Science';
+            resultText7.textContent = 'Bachelor of Social Science in Communication';
+            resultText8.textContent = 'Bachelor of Social Science in Human Settlement';
+            resultText9.textContent = 'Bachelor of Social Work';
+            resultText10.textContent = 'Bachelor of Theology';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Bachelor of Law (Extended Programme)';
+            resultText1.textContent = 'Bachelor of Administration in Public Administration';
+            resultText2.textContent = 'Bachelor of Commerce';
+            resultText3.textContent = 'Bachelor of Commerce in Information Systems';
+            resultText4.textContent = 'Bachelor of Commerce in Law';
+            resultText5.textContent = 'Bachelor of Education in Intermediate Phase Teaching (Please note that all your languages will have to be over 50%)';
+            resultText6.textContent = 'Bachelor of Science in Agriculture in Agricultural Economics (Extended Programme)';
+            resultText7.textContent = 'Bachelor of Education Senior and FET Phase (Agriculture Specialisation)';
+            resultText8.textContent = 'Bachelor of Agriculture';
+            resultText9.textContent = 'Bachelor of Agriculture in Agricultural Extension';
+            resultText10.textContent = 'Bachelor of Science in Agriculture in Agricultural Economics';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        } else if (englishInput.value >= 50 && mathInput.value >= 50 && lifescienceInput.value >= 50 && agricultureInput.value >= 50 && lifeorientationInput.value >= 50 && apsScore.value >= 30) {
+          resultText.textContent = 'Diploma in Fine Art';
+          resultText1.textContent = 'Bachelor of Arts';
+          resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+          resultText3.textContent = 'Bachelor of Fine Art';
+          resultText4.textContent = 'Bachelor of Lib and Info Science';
+          resultText5.textContent = 'Bachelor of Music';
+          resultText6.textContent = 'Bachelor of Social Science';
+          resultText7.textContent = 'Bachelor of Social Science in Communication';
+          resultText8.textContent = 'Bachelor of Social Science in Human Settlement';
+          resultText9.textContent = 'Bachelor of Social Work';
+          resultText10.textContent = 'Bachelor of Theology';
+          nextBtn.addEventListener('click', () => {
+            resultText.textContent = 'Diploma in Fine Art';
+            resultText1.textContent = 'Bachelor of Arts';
+            resultText2.textContent = 'Bachelor of Social Science (Extended Programme)';
+            resultText3.textContent = 'Bachelor of Fine Art';
+            resultText4.textContent = 'Bachelor of Lib and Info Science';
+            resultText5.textContent = 'Bachelor of Music';
+            resultText6.textContent = 'Bachelor of Social Science';
+            resultText7.textContent = 'Bachelor of Social Science in Communication';
+            resultText8.textContent = 'Bachelor of Social Science in Human Settlement';
+            resultText9.textContent = 'Bachelor of Social Work';
+            resultText10.textContent = 'Bachelor of Theology';
+        });
+          nextBtn1.addEventListener('click', () => {
+            resultText.textContent = 'Bachelor of Laws';
+            resultText1.textContent = 'Bachelor of Administration in Public Administration';
+            resultText2.textContent = 'Bachelor of Commerce';
+            resultText3.textContent = 'Bachelor of Commerce in Information Systems';
+            resultText4.textContent = 'Bachelor of Commerce in Law';
+            resultText5.textContent = 'Bachelor of Commerce in Accounting (Extended Programme)';
+            resultText6.textContent = 'Bachelor of Education in Intermediate Phase Teaching (Please note that all your languages will have to be over 50%)';
+            resultText7.textContent = 'Bachelor of Science in Agriculture in Agricultural Economics (Extended Programme)';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn2.addEventListener('click', () => {
+            resultText.textContent = 'Bachelor of Science in Agriculture in Agricultural Economics (Extended Programme)';
+            resultText1.textContent = 'Bachelor of Education Senior and FET Phase (Agriculture Specialisation)';
+            resultText2.textContent = 'Bachelor of Agriculture';
+            resultText3.textContent = 'Bachelor of Agriculture in Agricultural Extension';
+            resultText4.textContent = 'Bachelor of Science in Agriculture in Agricultural Economics';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn3.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn4.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+          nextBtn5.addEventListener('click', () => {
+            resultText.textContent = '';
+            resultText1.textContent = '';
+            resultText2.textContent = '';
+            resultText3.textContent = '';
+            resultText4.textContent = '';
+            resultText5.textContent = '';
+            resultText6.textContent = '';
+            resultText7.textContent = '';
+            resultText8.textContent = '';
+            resultText9.textContent = '';
+            resultText10.textContent = '';
+          });
+        }
+      });
+
+      window.onload = () => {
+        courseWrapper1.classList.add('hide');
+      };
+    </script>
+  </body>
+</html>

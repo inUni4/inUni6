@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial;
+      }
+      .header-wrapper{
+        background-color: purple;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+      .header-wrapper h1{
+        font-size: 23px;
+        margin-left: 6px;
+      }
+      .customer{
+        width: 80%;
+        border-radius: 60%;
+        margin-top: 15px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .customer1{
+        width: 50%;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .customer2{
+        width: 80%;
+        margin: 5px;
+        cursor: pointer;
+        margin-left: 15%;
+      }
+      .details-wrapper{
+        margin-top: 80px;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 50% 40%;
+        align-items: center;
+      }
+      .details-wrapper1{
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        align-items: center;
+      }
+      .details-wrapper1 div{
+        display: inline-block;
+        margin: 6px;
+      }
+      .details{
+        font-size: 12px;
+        font-weight: bold;
+        margin: 4px;
+      }
+      .details1{
+        font-size: 10px;
+        font-weight: bold;
+        margin: 4px;
+        transition: all 0.3s ease;
+      }
+      .name{
+        font-size: 16px;
+        font-weight: bold;
+        margin: 4px;
+      }
+      .accessories {
+        display: grid;
+        grid-template-columns: 34% 34% 34%;
+        justify-content: space-around;
+        align-items: center;
+      }
+      p{
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .hide{
+        opacity: 0;
+        pointer-events: none;
+      }
+      .show{
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .accessories div{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div>
+        <h1>inUni</h1>
+      </div>
+    </div>
+    <div class="details-wrapper">
+      <div>
+        <img src="FB_IMG_16886826129753649.jpg" class="customer">
+      </div>
+      <div class="info-wrapper">
+        <p class="name">inUni homepage</p>
+        <p class="details">Age : 1 month</p>
+        <p class="details">Purpose : Make life easier</p>
+        <p class="details"></p>
+        <p class="details"></p>
+        <p class="details"></p>
+      </div>
+      <div>
+        <p class="name">Accessories</p>
+        <div class="accessories">
+          <div>
+            <img src="budget.png" class="customer1" id="course-calculator">
+            <p class="details1">Course Calculator</p>
+          </div>
+          <div>
+            <img src="application.png" class="customer1" id="free-prizes">
+            <p class="details1">Apply here!</p>
+          </div>
+          <div>
+            <img src="plus.png" class="customer1" id="open-unies">
+            <p class="details1">More</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="details-wrapper1" id="calculator-wrapper">
+      <div class="image-wrapper">
+        <a href="https://inuni4.github.io/inUniHome/course-calculator-home.html">
+          <img src="budget.png" class="customer2">
+        </a>
+      </div>
+      <div>
+        <p class="name">Course Calculator</p>
+        <p>To check which courses you qualify for in multiple universities click here.</p>
+      </div>
+    </div>
+    <div class="details-wrapper1" id="gift-wrapper">
+      <div class="image-wrapper">
+        <a href="file:///C:/my-projects/apply-here.html">
+          <img src="application.png" class="customer2">
+        </a>
+
+      </div>
+      <div>
+        <p class="name">Apply here!</p>
+        <p>Click here for direct links to every university in South Africa.</p>
+      </div>
+    </div>
+    <div class="details-wrapper1" id="tip-wrapper">
+      <div class="image-wrapper">
+        <a href="file:///C:/my-projects/apply-here.html">
+          <img src="lightbulb.png" class="customer2">
+        </a>
+
+      </div>
+      <div>
+        <p class="name">Tips.</p>
+        <p>For tips on how to apply to university.</p>
+      </div>
+    </div>
+    <div class="details-wrapper1" id="uni-wrapper">
+      <div class="image-wrapper">
+        <a href="https://inuni4.github.io/inUnitest1/open-unies.html">
+          <img src="graduates.png" class="customer2">
+        </a>
+      </div>
+      <div>
+        <p class="name">Open Unies</p>
+        <p>To check which universities are currently open in South Africa click here.</p>
+      </div>
+    </div>
+    <div class="details-wrapper1" id="donation-wrapper">
+      <div class="image-wrapper">
+        <a href="https://pay.yoco.com/inuni">
+          <img src="donation.png" class="customer2">
+        </a>
+      </div>
+      <div>
+        <p class="name">Donations</p>
+        <p>To help matriculants who can't afford to pay university application fees click here.</p>
+      </div>
+    </div>
+    <script>
+      const courseCalculator = document.querySelector('#course-calculator');
+      const freePrizes = document.querySelector('#free-prizes');
+      const openUnies = document.querySelector('#open-unies');
+      const calculatorWrapper = document.querySelector('#calculator-wrapper');
+      const giftWrapper = document.querySelector('#gift-wrapper');
+      const uniWrapper = document.querySelector('#uni-wrapper');
+      const tipWrapper = document.querySelector('#tip-wrapper');
+      const donationWrapper = document.querySelector('#donation-wrapper');
+
+      courseCalculator.addEventListener('click', () => {
+        calculatorWrapper.classList.remove('hide');
+      });
+      freePrizes.addEventListener('click', () => {
+        giftWrapper.classList.remove('hide');
+      });
+      openUnies.addEventListener('click', () => {
+        calculatorWrapper.classList.remove('hide');
+        giftWrapper.classList.remove('hide');
+        uniWrapper.classList.remove('hide');
+        tipWrapper.classList.remove('hide');
+        donationWrapper.classList.remove('hide');
+      });
+
+      window.onload = () => {
+        calculatorWrapper.classList.add('hide');
+        giftWrapper.classList.add('hide');
+        uniWrapper.classList.add('hide');
+        tipWrapper.classList.add('hide');
+        donationWrapper.classList.add('hide');
+      }
+    </script>
+  </body>
+</html>
