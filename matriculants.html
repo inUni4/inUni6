@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial;
+        background-color: purple;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .header-wrapper{
+        background-color: white;
+        color: purple;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+      .header-wrapper h1{
+        font-size: 23px;
+        margin-left: 6px;
+      }
+      .details-wrapper{
+        width: 90%;
+        max-width: 500px;
+        border-radius: 6px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: white;
+        text-align: center;
+      }
+      button{
+        background-color: purple;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: bold;
+        padding: 6px 12px;
+        margin-top: 40px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover{
+        transform: scale(0.9);
+      }
+      button:active{
+        background-color: white;
+        color: purple;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div>
+        <h1>inUni</h1>
+      </div>
+    </div>
+    <div class="details-wrapper">
+      <p id="details-text">If you want us to apply for you, then you can email us at inuni231@gmail.com, with a certified copy of your ID, Final Grade 11/ June Grade 12 results, Proof of Residence and we will do it for free.</p>
+      <div>
+        <button id="next-button">1</button>
+        <button id="next-button1">2</button>
+        <button id="next-button2">3</button>
+        <button id="next-button3">4</button>
+      </div>
+    </div>
+    <script>
+      const nextBtn = document.querySelector('#next-button');
+      const nextBtn1 = document.querySelector('#next-button1');
+      const nextBtn2 = document.querySelector('#next-button2');
+      const nextBtn3 = document.querySelector('#next-button3');
+      const detailsText = document.querySelector('#details-text');
+
+      nextBtn.addEventListener('click', () => {
+        detailsText.textContent = 'If you want us to apply for you, then you can email us at inuni231@gmail.com, with a certified copy of your ID, Final Grade 11/ June Grade 12 results, Proof of Residence and we will do it for free.'
+      });
+
+      nextBtn1.addEventListener('click', () => {
+        detailsText.textContent = 'After receiving a confirmation email from us, you will be sure to receive communication from a university within 3 working days.'
+      });
+      nextBtn2.addEventListener('click', () => {
+        detailsText.textContent = 'Please note that even though we will be applying for you at no additional cost , we are not liable for any application fees.'
+      });
+      nextBtn3.addEventListener('click', () => {
+        detailsText.textContent = 'And please do not forget your required documents.'
+      });
+    </script>
+  </body>
+</html>
