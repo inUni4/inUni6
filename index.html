@@ -174,7 +174,7 @@
         <p>Click here for direct links to every university in South Africa.</p>
       </div>
     </div>
-    <div class="details-wrapper1" id="gift-wrapper">
+    <div class="details-wrapper1" id="free-wrapper">
       <div class="image-wrapper">
         <a href="https://inuni.site/apply-here.html">
           <img src="free.png" class="customer2">
@@ -229,6 +229,7 @@
       const uniWrapper = document.querySelector('#uni-wrapper');
       const tipWrapper = document.querySelector('#tip-wrapper');
       const donationWrapper = document.querySelector('#donation-wrapper');
+      const freeWrapper = document.querySelector('#free-wrapper');
 
       courseCalculator.addEventListener('click', () => {
         calculatorWrapper.classList.remove('hide');
@@ -242,6 +243,7 @@
         uniWrapper.classList.remove('hide');
         tipWrapper.classList.remove('hide');
         donationWrapper.classList.remove('hide');
+        freeWrapper.classList.remove('hide');
       });
 
       window.onload = () => {
@@ -250,6 +252,7 @@
         uniWrapper.classList.add('hide');
         tipWrapper.classList.add('hide');
         donationWrapper.classList.add('hide');
+        freeWrapper.classList.add('hide');
       }
     </script>
   </body>
