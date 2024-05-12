@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF514ZKSG0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PF514ZKSG0');
+  </script>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916042835065059"
+      crossorigin="anonymous"></script>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      body{
+        font-family: Arial;
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .header-wrapper{
+        background-color: purple;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        width: 100%;
+        transition: all 0.3s ease;
+        z-index: 1;
+      }
+      .header-wrapper h1{
+        font-size: 23px;
+        margin-left: 6px;
+      }
+      input{
+        padding: 10px 12px;
+        border-radius: 6px;
+        border: none;
+        width: 80%;
+        font-size: 12px;
+        text-align: center;
+      }
+      .search-button{
+        background-color:rgb(0, 123, 255);
+        color: white;
+        font-size: 68%;
+        font-weight: bold;
+        padding: 10px 12px;
+        width: 70%;
+        border: 1px solid white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .search-button:active{
+        background-color: white;
+        color: rgb(0, 123, 255);
+      }
+      
+      .side-bar{
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        background-color: white;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 1487px;
+        color: rgb(0, 123, 255);
+        width: 50%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+      .image-container{
+        align-items: center;
+        border: 1px solid;
+      }
+      .jake{
+        width: 30%;
+        border-radius: 60%;
+        margin-top: 2%;
+        margin-left: 31%;
+        margin-bottom: 5%;
+      }
+      .departments p{
+        font-weight: bold;
+        font-size: 12px;
+      }
+      .departments{
+        margin-top: 15%;
+      }
+      .departments div{
+        padding: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .departments div:hover{
+        color: white;
+        background-color: rgba(0, 123, 255, 0.603);
+
+      }
+      .hide{
+        opacity: 0;
+        pointer-events: none;
+      }
+      .show{
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .menu-wrapper{
+        text-align: center;
+        margin: 50px;
+        width: 100%;
+        padding: 6px;
+        align-items: center;
+
+      }
+      .menu-wrapper p{
+        width: 100%;
+      }
+      .menu-button{
+        width: 70%;
+        cursor: pointer;
+      }
+      .remove-button{
+        width: 15%;
+        cursor: pointer;
+        margin-top: 12%;
+      }
+      .job-images{
+        width: 99%;
+      }
+      .menu-header{
+        font-size: 23px;
+        font-weight: bold;
+      }
+      .menu-wrapper div{
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        width: 70%;
+        padding: 24px;
+      }
+      .job-header{
+        font-size: 17px;
+        font-weight: bold;
+      }
+      .money-text{
+        font-size: 12px;
+        background-color: rgba(0, 0, 0, 0.12);
+      }
+      .profile-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 6px;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .info-text{
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .pro-pic{
+        width: 30%;
+        border-radius: 50%;
+        margin: 24px;
+      }
+      .trend-text{
+        font-size: 95%;
+        font-weight: bold;
+      }
+      .header-text{
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .header-text1{
+        font-weight: bold;
+        font-size: 12px;
+      }
+      .bursaries-wrapper{
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 20%;
+      }
+      .bursary-wrapper{
+        padding: 12px;
+        border-radius: 6px;
+        width: 90%;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        display: inline-block;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div>
+        <h1>inUni</h1>
+      </div>
+    </div>
+    <div class="bursaries-wrapper">
+      <div class="bursary-wrapper">
+        <div class="details-text">
+          
+          <p class="header-text">
+            Nedbank External Bursary Programme
+          </p>
+          <p class="info-text"><a class="header-text1">Covers</a>: first Undergraduate or Honours degree, preferably in Science, Technology, Engineering, Mathematics (STEM) and Green Economy skills.</p>
+        </div>
+          <a class="header-text1">REQUIREMENTS</a>  : Applicants must satisfy the following minimum entry criteria before applying (please note that failure to satisfy all the requirements will lead to your application not being considered):
+
+          <li class="info-text">You must be a South African citizen</li>
+          <li class="info-text">You must be currently in Matric or have completed Matric</li>
+          <li class="info-text">You must be studying or intend on studying towards your first undergraduate or Honours qualification in 2025</li>
+          <li class="info-text">You must be studying or have been accepted to study full-time at a recognised and accredited public University or University of Technology in South Africa</li>
+          <li class="info-text">You must have a strong academic record</li>
+          <li class="info-text">You must have passed Mathematics in Matric (NOT Mathematics Literacy)</li>
+          <li class="info-text">You must have achieved a minimum overall average of 65% for the 2024 academic year (at Matric or University level)</li>
+          <li class="info-text">You must have achieved a minimum overall average of 65% for all subjects that are aligned to your University qualification</li>
+          <li class="info-text">You must have proven financial need (to be determined by household income)</li>
+          
+              </p>
+              <p class="info-text">HOW TO APPLY FOR THE NEDBANK BURSARY
+
+                Applications must be submitted online at: 
+                <a href="https://nedbankex.fra1.qualtrics.com/jfe/form/SV_5BWv5W1x4YvGZbo
+                ">Nedbank External Bursary Application</a></p>
+          <p class="info-text">
+            <a class="header-text1">CLOSING DATE FOR THE NEDBANK BURSARY</a>
+
+            31 July 2024.
+            (Applications submitted after this date will not be accepted – please apply before the closing date to ensure your application is considered).
+            
+          </p>
+      </div>
+
+      <div class="bursary-wrapper">
+        <div class="details-text">
+          
+          <p class="header-text">
+            THE IITPSA BURSARY
+          </p>
+          <p class="info-text"><a class="header-text1">Covers</a>:  Applied Computing, Computer Science, Informatics and Information Systems.
+          </p>
+        </div>
+          <a class="header-text1">REQUIREMENTS</a>  : Applicants must satisfy the following minimum entry criteria before applying (please note that failure to satisfy all the requirements will lead to your application not being considered):
+
+          <li class="info-text">You must be a South African citizen</li>
+          <li class="info-text">You must be studying or registered for full-time undergraduate degree studies, towards a 3 year Bachelor of Science or Bachelor of Commerce degree, in one of the fields listed above
+          </li>
+          <li class="info-text">You must have achieved a minimum overall average of 65% in the latest examinations
+          </li>
+          <li class="info-text">You must meet the entry requirements of your course of study</li>
+          <li class="info-text">You must be studying or intend on studying at a recognised and accredited public university in South Africa
+          </li>
+          <li class="info-text">Preference will be students who have completed and excelled in The Computer Programming Olympiad (a project of IITPSA)
+          </li>
+          
+              </p>
+              <p class="info-text">HOW TO APPLY FOR THE IITPSA BURSARY
+
+                Applications must be submitted online at: 
+                <a href=" https://studytrust.devman.co.za/devman/app/welcome/">THE IITPSA BURSARY</a></p>
+          <p class="info-text">
+            <a class="header-text1">CLOSING DATE FOR THE IITPSA BURSARY</a>
+
+              30 September 2024.
+              (Applications submitted after this date will not be accepted – please apply before the closing date to ensure your application is considered.)
+
+
+          </p>
+      </div>
+      <div class="bursary-wrapper">
+        <div class="details-text">
+          
+          <p class="header-text">
+            OLD MUTUAL IMFUNDO TRUST SCHOLARSHIP</p>
+          <p class="info-text"><a class="header-text1">Covers</a>:  Business, Climate Studies, Commerce, Computer Science and related qualifications, Data Science, Engineering, Finance and Management Sciences / Studies.</p>
+        </div>
+          <a class="header-text1">REQUIREMENTS</a>  : Applicants must satisfy the following minimum entry criteria before applying (please note that failure to satisfy all the requirements will lead to your application not being considered):
+
+          <li class="info-text">You must be a South African citizen</li>
+          <li class="info-text">You must be currently in Matric OR have completed Matric</li>
+          <li class="info-text">You must be studying or intend on studying full-time, towards a qualification in one of the fields listed above</li>
+          <li class="info-text">You must be entering your first or second year of study in 2025 (except for Climate Studies, which is only for postgraduate students)</li>
+          <li class="info-text">You must be studying or intend on studying at a recognised and accredited tertiary institution in South Africa</li>
+          <li class="info-text">You must have achieved a minimum overall average of 70% in the mid-year Matric exams, with a minimum of 70% in Mathematics and 70% in English FAL or 60% in English HL (if currently in Matric and entering 1st year next year)</li>
+          <li class="info-text">You must have achieved a minimum overall average of 65% in the most recent exams, if currently studying</li>
+          <li class="info-text">Preference will be given to candidates from rural and township backgrounds</li>
+          
+              </p>
+              <p class="info-text">HOW TO APPLY FOR THE OLD MUTUAL IMFUNDO TRUST SCHOLARSHIP
+
+                Applications must be submitted online at: 
+                <a href=" https://studytrust.devman.co.za/devman/app/welcome/">THE OLD MUTUAL IMFUNDO TRUST SCHOLARSHIP</a></p>
+          <p class="info-text">
+            <a class="header-text1">CLOSING DATE FOR THE OLD MUTUAL IMFUNDO TRUST SCHOLARSHIP</a>
+
+              10 October 2024.
+              (Applications submitted after this date will not be accepted – please apply before the closing date to ensure your application is considered.)
+
+
+          </p>
+      </div>
+
+      <div class="bursary-wrapper">
+        <div class="details-text">
+          
+          <p class="header-text">
+            STANDARD BANK BURSARY</p>
+          <p class="info-text"><a class="header-text1">Covers</a>:  Undergraduate and Postgraduate: Actuarial Science, Analytics Science, Agriculture, Behavioural Economics, Behavioural Finance, Business Science, Commerce, Computer Science, Data Science, Economics, Engineering, Financial Technology, Information Science, Information Technology, Mathematics, Neuroscience, Psychology, Sociology and Statistics.</p>
+        </div>
+          <a class="header-text1">REQUIREMENTS</a>  : Applicants must satisfy the following minimum entry criteria before applying (please note that failure to satisfy all the requirements will lead to your application not being considered):
+
+          
+          <p class="header-text1">Undergraduate students:</p>
+          <li class="info-text">You must have completed Matric</li>
+          <li class="info-text">You must be studying full-time towards an undergraduate qualification, within one of the fields listed above</li>
+          <li class="info-text">You must be entering your 2nd, 3rd or 4th year of study in 2025</li>
+          <li class="info-text">You must be studying at a recognised and accredited public tertiary institution in South Africa</li>
+          <li class="info-text">You must have a strong academic record</li>
+          <li class="info-text">You must have achieved a minimum overall average of 65% in your most recent examinations</li>
+          <li class="info-text">You must be in financial need</li>
+          <p class="header-text1">Postgraduate students:</p>
+          <li class="info-text">You must be studying full-time towards a postgraduate qualification (up to Master’s level), in one of the fields listed above</li>
+          <li class="info-text">You must be studying at a recognised and accredited public tertiary institution in South Africa</li>
+          <li class="info-text">You must have a strong academic record</li>
+          <li class="info-text">You must have achieved a minimum overall average of 65% in your most recent examinations</li>
+          <li class="info-text">You must be in financial need</li>
+          
+              </p>
+              <p class="info-text">HOW TO APPLY FOR THE STANDARD BANK BURSARY
+
+                Applications must be submitted online at: 
+                <a href=" https://studytrust.devman.co.za/devman/app/welcome/">THE STANDARD BANK BURSARY</a></p>
+          <p class="info-text">
+            <a class="header-text1">CLOSING DATE FOR THE STANDARD BANK BURSARY</a>
+
+              30 September 2024.
+              (Applications submitted after this date will not be accepted – please apply before the closing date to ensure your application is considered.)
+
+
+          </p>
+      </div>
+
+      <div class="bursary-wrapper">
+        <div class="details-text">
+          
+          <p class="header-text">INVESTEC BURSARY</p>
+          <p class="info-text"><a class="header-text1">Covers</a>:  Actuarial Science, Business Science, Commerce (Accounting, Business Economics, Economics, Finance, Investments), Commercial LLB, Computer Science, Engineering, Informatics, Information Science, Information Technology, Mathematics, Medicine Degrees and Science.
+          </p>
+        </div>
+          <a class="header-text1">REQUIREMENTS</a>  : Applicants must satisfy the following minimum entry criteria before applying (please note that failure to satisfy all the requirements will lead to your application not being considered):
+
+          <li class="info-text">You must be a South African citizen</li>
+          <li class="info-text">You must have completed Matric OR you must be currently in Matric</li>
+          <li class="info-text">You must be studying or intend on studying full time towards an undergraduate degree, in one of the fields listed above</li>
+          <li class="info-text">You must be studying or intend on studying at a recognised and accredited public university in South Africa (the bursary does not cover studies at private tertiary institutions)</li>
+          <li class="info-text">You must have achieved a minimum result of 70% for Mathematics (not Mathematics Literacy) in Matric</li>
+          <li class="info-text">You must have achieved a minimum result of 70% for English FAL or 65% for English HL in Matric</li>
+          <li class="info-text">You must have achieved a minimum result of 50% for all other subjects in Matric</li>
+          <li class="info-text">You must have achieved a minimum overall average of 60% for your first semester examination, if currently studying at university</li>
+          <li class="info-text">Actuarial Science applicants: you must be in your first year of study (unless you are studying towards a Business Science degree at UCT)</li>
+              </p>
+              <p class="info-text">HOW TO APPLY FOR THE Investec Bursary Application
+
+                Applications must be submitted online at: 
+                <a href=" https://studytrust.devman.co.za/devman/app/welcome/">Investec Bursary Application</a></p>
+          <p class="info-text">
+            <a class="header-text1">CLOSING DATE FOR THE Investec Bursary Application</a>
+
+              30 September 2024.
+              (Applications submitted after this date will not be accepted – please apply before the closing date to ensure your application is considered.)
+
+
+          </p>
+      </div>
+    </div>
+  </body>
+</html>
