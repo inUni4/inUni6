@@ -209,6 +209,17 @@
         <p>To check which universities are currently open in South Africa click here.</p>
       </div>
     </div>
+    <div class="details-wrapper1" id="bursary-wrapper">
+      <div class="image-wrapper">
+        <a href="https://inuni.site/bursary-list.html">
+          <img src="scholarship.png" class="customer2">
+        </a>
+      </div>
+      <div>
+        <p class="name">Bursaries</p>
+        <p>Click here for a list of open bursaries.</p>
+      </div>
+    </div>
     <div class="details-wrapper1" id="donation-wrapper">
       <div class="image-wrapper">
         <a href="https://pay.yoco.com/inuni">
@@ -230,6 +241,7 @@
       const tipWrapper = document.querySelector('#tip-wrapper');
       const donationWrapper = document.querySelector('#donation-wrapper');
       const freeWrapper = document.querySelector('#free-wrapper');
+      const bursaryWrapper = document.querySelector('#bursary-wrapper');
 
       courseCalculator.addEventListener('click', () => {
         calculatorWrapper.classList.remove('hide');
@@ -244,6 +256,7 @@
         tipWrapper.classList.remove('hide');
         donationWrapper.classList.remove('hide');
         freeWrapper.classList.remove('hide');
+        bursaryWrapper.classList.remove('hide');
       });
 
       window.onload = () => {
@@ -253,6 +266,7 @@
         tipWrapper.classList.add('hide');
         donationWrapper.classList.add('hide');
         freeWrapper.classList.add('hide');
+        bursaryWrapper.classList.add('hide');
       }
     </script>
   </body>
