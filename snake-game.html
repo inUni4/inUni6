@@ -142,7 +142,7 @@
         {x:0, y:0}
       ];
       alert(`Attention in order to be able to control the snake, you need to press the up, left, down and right buttons on your keyboard but if you're using a mobile device then I'm sorry but you can't play.`);
-      alert(`And in order for you to win a reward of R120, you need to beat the high score of 20 points.`);
+      alert(`And in order for you to win a reward of R120, you need to beat the high score of 100 points.`);
 
       window.onload = () => {
         highScoreWrapper.classList.add('hide');
@@ -284,7 +284,7 @@
       };
 
       function highScore() {
-        if(score == 20) {
+        if(score == 100) {
           running = false;
           gameBoard.classList.add('hide');
           resetBtn.classList.add('hide');
