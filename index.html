@@ -231,6 +231,17 @@
         <p>Click here to win R120.</p>
       </div>
     </div>
+    <div class="details-wrapper1" id="intern-wrapper">
+      <div class="image-wrapper">
+        <a href="https://inuni.site/internship.html">
+          <img src="internship.png" class="customer2">
+        </a>
+      </div>
+      <div>
+        <p class="name">Internships</p>
+        <p>Click here for a list of internships.</p>
+      </div>
+    </div>
     <div class="details-wrapper1" id="donation-wrapper">
       <div class="image-wrapper">
         <a href="https://pay.yoco.com/inuni">
@@ -254,6 +265,7 @@
       const freeWrapper = document.querySelector('#free-wrapper');
       const bursaryWrapper = document.querySelector('#bursary-wrapper');
       const gameWrapper = document.querySelector('#game-wrapper');
+      const internWrapper = document.querySelector('#intern-wrapper');
 
 
       courseCalculator.addEventListener('click', () => {
@@ -271,6 +283,7 @@
         freeWrapper.classList.remove('hide');
         bursaryWrapper.classList.remove('hide');
         gameWrapper.classList.remove('hide');
+        internWrapper.classList.remove('hide');
       });
 
       window.onload = () => {
@@ -282,6 +295,7 @@
         freeWrapper.classList.add('hide');
         bursaryWrapper.classList.add('hide');
         gameWrapper.classList.add('hide');
+        internWrapper.classList.add('hide');
       }
     </script>
   </body>
