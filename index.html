@@ -252,6 +252,16 @@
         <p class="name">Donations</p>
         <p>To help matriculants who can't afford to pay university application fees click here.</p>
       </div>
+      <div class="details-wrapper1" id="privacy-wrapper">
+      <div class="image-wrapper">
+        <a href="https://inuni.site/privacy.html">
+          <img src="compliant.png" class="customer2">
+        </a>
+      </div>
+      <div>
+        <p class="name">Privacy policy</p>
+        <p>Click here to view our privacy policy.</p>
+      </div>
     </div>
     <script>
       const courseCalculator = document.querySelector('#course-calculator');
@@ -266,6 +276,7 @@
       const bursaryWrapper = document.querySelector('#bursary-wrapper');
       const gameWrapper = document.querySelector('#game-wrapper');
       const internWrapper = document.querySelector('#intern-wrapper');
+      const privacyWrapper = document.querySelector('#privacy-wrapper');
 
 
       courseCalculator.addEventListener('click', () => {
@@ -284,6 +295,7 @@
         bursaryWrapper.classList.remove('hide');
         gameWrapper.classList.remove('hide');
         internWrapper.classList.remove('hide');
+        privacyWrapper.classList.remove('hide');
       });
 
       window.onload = () => {
@@ -296,6 +308,7 @@
         bursaryWrapper.classList.add('hide');
         gameWrapper.classList.add('hide');
         internWrapper.classList.add('hide');
+        privacyWrapper.classList.add('hide');
       }
     </script>
   </body>
