@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF514ZKSG0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PF514ZKSG0');
+    </script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916042835065059"
+        crossorigin="anonymous"></script>
+    <style>
+      body{
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+      }
+      .course-wrapper{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper1{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper h1{
+        font-size: 24px;
+      }
+      input{
+        width: 90%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        margin: 6px;
+      }
+      button{
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover{
+        transform: scale(0.9);
+      }
+      p{
+        font-size: 12px;
+      }
+      .hide{
+        opacity: 0;
+        pointer-events: none;
+      }
+      li{
+        list-style: none;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="course-wrapper">
+      <h1>WSU Course Calculator</h1>
+      <input type="text" placeholder="English%" class="english-input">
+      <input type="text" placeholder="Aps Score" class="aps-score">
+      <button class="calculate-button">Calculate</button>
+    </div>
+    <div class="course-wrapper1">
+      <p class="result-text"></p>
+      <p class="result-text1"></p>
+    </div>
+    <script>
+      const englishInput = document.querySelector('.english-input');
+      const apsScore = document.querySelector('.aps-score');
+      const calculateBtn = document.querySelector('.calculate-button');
+      const resultText = document.querySelector('.result-text');
+      const resultText1 = document.querySelector('.result-text1');
+      const courseWrapper = document.querySelector('.course-wrapper');
+      const courseWrapper1 = document.querySelector('.course-wrapper1');
+
+      calculateBtn.addEventListener('click', () => {
+        courseWrapper.classList.add('hide');
+        courseWrapper1.classList.remove('hide');
+        let aps18 = ["Higher Certificate in Versatile Broadcasting"];
+        let aps20 = ["Higher Certificate in Versatile Broadcasting", "Diploma in Fine Art"];
+        let aps21 = ["Higher Certificate in Versatile Broadcasting", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)"];
+        let aps23 = ["Higher Certificate in Versatile Broadcasting", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)", "Diploma in Policing", "Diploma in Public Management", "Diploma in Sport Management", "Diploma in Journalism", "Diploma in Public Relations Management"];
+        let aps24 = ["Higher Certificate in Versatile Broadcasting", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)", "Diploma in Policing", "Diploma in Public Management", "Diploma in Sport Management", "Diploma in Journalism", "Diploma in Public Relations Management", "Bachelor of Social Science"];
+        let aps26 = ["Higher Certificate in Versatile Broadcasting", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)", "Diploma in Policing", "Diploma in Public Management", "Diploma in Sport Management", "Diploma in Journalism", "Diploma in Public Relations Management", "Bachelor of Social Science", "Bachelor of Social Science"];
+        let aps27 = ["Higher Certificate in Versatile Broadcasting", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)", "Diploma in Policing", "Diploma in Public Management", "Diploma in Sport Management", "Diploma in Journalism", "Diploma in Public Relations Management", "Bachelor of Social Science", "Bachelor of Social Science", "Bachelor of Administration"];
+
+        
+        if (englishInput.value >= 50 && apsScore.value > 17 && apsScore.value < 20 ) {
+          for(let i = 0; i < aps18.length; i++) {
+          resultText.textContent += `${aps18[i]}`;
+        };
+        } else if (englishInput.value >= 50 && apsScore.value == 20 ) {
+          for(let i = 0; i < aps20.length; i++) {
+          resultText.textContent += `${aps20[i]}`;
+        };
+        } else if (englishInput.value >= 50 && apsScore.value > 20 && apsScore.value < 23 ) {
+          for(let i = 0; i < aps21.length; i++) {
+          resultText.innerHTML += `<li> ${aps21[i]} </li>`;
+        };
+      } else if (englishInput.value >= 50 && apsScore.value == 23 ) {
+          for(let i = 0; i < aps23.length; i++) {
+          resultText.innerHTML += `<li> ${aps23[i]} </li>`;
+        };
+      } else if (englishInput.value >= 50 && apsScore.value > 23 && apsScore.value < 26 ) {
+          for(let i = 0; i < aps24.length; i++) {
+          resultText.innerHTML += `<li> ${aps24[i]} </li>`;
+        };
+      }
+      else if (englishInput.value >= 50 && apsScore.value == 26 ) {
+          for(let i = 0; i < aps26.length; i++) {
+          resultText.innerHTML += `<li> ${aps26[i]} </li>`;
+        };
+      } else if (englishInput.value >= 50 && apsScore.value >= 27 ) {
+          for(let i = 0; i < aps27.length; i++) {
+          resultText.innerHTML += `<li> ${aps27[i]} </li>`;
+        };
+      }
+      });
+
+      window.onload = () => {
+        courseWrapper1.classList.add('hide');
+      };
+    </script>
+  </body>
+</html>

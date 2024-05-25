@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF514ZKSG0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PF514ZKSG0');
+    </script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916042835065059"
+        crossorigin="anonymous"></script>
+    <style>
+      body{
+        font-family: Arial;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: purple;
+      }
+      .course-wrapper{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper1{
+        background-color: white;
+        border: none;
+        border-radius: 6px;
+        max-width: 300px;
+        width: 50%;
+        transition: all 0.3s ease;
+        display: grid;
+        grid-template: column;
+        align-items: center;
+        text-align: center;
+        padding: 6px;
+        position: absolute;
+        top: 20%;
+      }
+      .course-wrapper h1{
+        font-size: 24px;
+      }
+      input{
+        width: 90%;
+        padding: 6px;
+        border: none;
+        border-radius: 6px;
+        margin: 6px;
+      }
+      button{
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        border: none;
+        border-radius: 6px;
+        padding: 6px 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover{
+        transform: scale(0.9);
+      }
+      p{
+        font-size: 12px;
+      }
+      .hide{
+        opacity: 0;
+        pointer-events: none;
+      }
+      li{
+        list-style: none;
+        margin: 16px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="course-wrapper">
+      <h1>WSU Course Calculator</h1>
+      <input type="text" placeholder="English%" class="english-input">
+      <input type="text" placeholder="Mathematics%" class="math-input">
+      <input type="text" placeholder="Physical Science%" class="physics-input">
+      <input type="text" placeholder="Aps Score" class="aps-score">
+      <button class="calculate-button">Calculate</button>
+    </div>
+    <div class="course-wrapper1">
+      <p class="result-text"></p>
+      <p class="result-text1"></p>
+      <div>
+        <button class="next-button">1</button>
+      </div>
+    </div>
+    
+    <script>
+      const englishInput = document.querySelector('.english-input');
+      const mathInput = document.querySelector('.math-input');
+      const physicsInput = document.querySelector('.physics-input');
+      const apsScore = document.querySelector('.aps-score');
+      const calculateBtn = document.querySelector('.calculate-button');
+      const resultText = document.querySelector('.result-text');
+      const resultText1 = document.querySelector('.result-text1');
+      const courseWrapper = document.querySelector('.course-wrapper');
+      const courseWrapper1 = document.querySelector('.course-wrapper1');
+      const nextBtn = document.querySelector('.next-button');
+
+      calculateBtn.addEventListener('click', () => {
+        courseWrapper.classList.add('hide');
+        courseWrapper1.classList.remove('hide');
+        let aps18 = ["Diploma in Information and Communications Technology in Applications Development (Extended Stream)", "Diploma in Information and Communications Technology in Business Analysis (Extended Stream)", "Diploma in Information and Communications Technology in Communication Networks (Extended Stream)", "Diploma in Information and Communications Technology in Support Services (Extended Stream)"];
+        let aps20 = ["Diploma in Information and Communications Technology in Applications Development (Extended Stream)", "Diploma in Information and Communications Technology in Business Analysis (Extended Stream)", "Diploma in Information and Communications Technology in Communication Networks (Extended Stream)", "Diploma in Information and Communications Technology in Support Services (Extended Stream)", "Diploma in Fine Art"];
+        let aps21 = ["Diploma in Information and Communications Technology in Applications Development (Extended Stream)", "Diploma in Information and Communications Technology in Business Analysis (Extended Stream)", "Diploma in Information and Communications Technology in Communication Networks (Extended Stream)", "Diploma in Information and Communications Technology in Support Services (Extended Stream)"];
+        let aps21More = ["Diploma in Fine Art", "Diploma in Public Relations Management(ECP)", "Diploma in Human Resource Management (ECP)", "Diploma in Local Government Finance (ECP)", "Diploma in Management (ECP)", "Diploma in Office Management and Technology (ECP)", "Diploma in Internal Auditing (ECP)"];
+        let aps22 = ["Diploma in Information and Communications Technology in Applications Development (Extended Stream)", "Diploma in Information and Communications Technology in Business Analysis (Extended Stream)", "Diploma in Information and Communications Technology in Communication Networks (Extended Stream)", "Diploma in Information and Communications Technology in Support Services (Extended Stream)", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)"];
+        let aps22More = ["Diploma in Human Resource Management (ECP)", "Diploma in Local Government Finance (ECP)", "Diploma in Management (ECP)", "Diploma in Office Management and Technology (ECP)", "Diploma in Internal Auditing (ECP)", "Diploma in Adult and Community Education and Training (*IsiXhosa 40%)", "Diploma in Building Technology (ECP)", "Diploma in Civil Engineering (ECP)", "Diploma in Electrical Engineering (ECP)", "Diploma in Mechanical Engineering (ECP)"];
+        let aps23 = ["Diploma in Information and Communications Technology in Applications Development (Extended Stream)", "Diploma in Information and Communications Technology in Business Analysis (Extended Stream)", "Diploma in Information and Communications Technology in Communication Networks (Extended Stream)", "Diploma in Information and Communications Technology in Support Services (Extended Stream)", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)", "Diploma in Human Resource Management"];
+        let aps23More = ["Diploma in Local Government Finance", "Diploma in Management", "Diploma in Office Management and Technology (ECP)", "Diploma in Internal Auditing", "Diploma in Adult and Community Education and Training (*IsiXhosa 40%)", "Diploma in Policing", "Diploma in Public Management", "Diploma in Sport Management", "Diploma in Marketing Management", "Diploma in Small Business Management", "Diploma in Accountancy", "Diploma in Finacial Information systems", "Diploma in Building Technology (ECP)", "Diploma in Civil Engineering (ECP)", "Diploma in Electrical Engineering (ECP)", "Diploma in Mechanical Engineering (ECP)"];
+        let aps24 = ["Diploma in Information and Communications Technology in Applications Development (Extended Stream)", "Diploma in Information and Communications Technology in Business Analysis (Extended Stream)", "Diploma in Information and Communications Technology in Communication Networks (Extended Stream)", "Diploma in Information and Communications Technology in Support Services (Extended Stream)", "Diploma in Fine Art", "Diploma in Public Relations Management(ECP)", "Diploma in Human Resource Management"];
+        let aps24More = ["Diploma in Local Government Finance", "Diploma in Management", "Diploma in Office Management and Technology (ECP)", "Diploma in Internal Auditing", "Diploma in Adult and Community Education and Training (*IsiXhosa 40%)", "Diploma in Policing", "Diploma in Public Management", "Diploma in Sport Management", "Bachelor of Social Science", "Diploma in Marketing Management", "Diploma in Small Business Management", "Diploma in Accountancy", "Diploma in Finacial Information systems", "Diploma in Building Technology (ECP)", "Diploma in Civil Engineering (ECP)", "Diploma in Electrical Engineering (ECP)", "Diploma in Mechanical Engineering (ECP)"];
+
+        
+
+        if (englishInput.value >= 40 && mathInput.value >= 30 && physicsInput.value >= 40 && apsScore.value > 17 && apsScore.value < 20 ) {
+          for(let i = 0; i < aps18.length; i++) {
+          resultText.innerHTML += `<li> ${aps18[i]} </li>`;
+        };
+        } else if (englishInput.value >= 40 && mathInput.value >= 30 && physicsInput.value >= 40 && apsScore.value == 20 ) {
+          for(let i = 0; i < aps20.length; i++) {
+          resultText.innerHTML += `<li> ${aps20[i]} </li>`;
+        };
+        } else if (englishInput.value >= 40 && mathInput.value >= 30 && physicsInput.value >= 40 && apsScore.value == 21) {
+          nextBtn.classList.remove('hide');
+          for(let i = 0; i < aps21.length; i++) {
+          resultText.innerHTML += `<li> ${aps21[i]} </li>`;
+        };
+        nextBtn.addEventListener('click', () => {
+          aps21 = [""];
+          resultText.innerHTML = aps21[0];
+          for(let i = 0; i < aps21More.length; i++) {
+            resultText.innerHTML += `<li> ${aps21More[i]} </li>`;
+        };
+          });
+      } else if (englishInput.value >= 40 && mathInput.value >= 30 && physicsInput.value >= 40 && apsScore.value == 22) {
+          nextBtn.classList.remove('hide');
+          for(let i = 0; i < aps22.length; i++) {
+          resultText.innerHTML += `<li> ${aps22[i]} </li>`;
+        };
+        nextBtn.addEventListener('click', () => {
+          aps22 = [""];
+          resultText.innerHTML = aps22[0];
+          for(let i = 0; i < aps22More.length; i++) {
+            resultText.innerHTML += `<li> ${aps22More[i]} </li>`;
+        };
+          });
+      } else if (englishInput.value >= 40 && mathInput.value >= 40 && physicsInput.value >= 40 && apsScore.value == 23 ) {
+          nextBtn.classList.remove('hide');
+          for(let i = 0; i < aps23.length; i++) {
+          resultText.innerHTML += `<li> ${aps23[i]} </li>`;
+        };
+
+        nextBtn.addEventListener('click', () => {
+          aps23 = [""];
+          resultText.innerHTML = aps23[0];
+          for(let i = 0; i < aps23More.length; i++) {
+            resultText.innerHTML += `<li> ${aps23More[i]} </li>`;
+        };
+          });
+      } else if (englishInput.value >= 40 && mathInput.value >= 40 && physicsInput.value >= 40 && apsScore.value >= 24 ) {
+          nextBtn.classList.remove('hide');
+          for(let i = 0; i < aps24.length; i++) {
+          resultText.innerHTML += `<li> ${aps24[i]} </li>`;
+        };
+
+        nextBtn.addEventListener('click', () => {
+          aps24 = [""];
+          resultText.innerHTML = aps24[0];
+          for(let i = 0; i < aps24More.length; i++) {
+            resultText.innerHTML += `<li> ${aps24More[i]} </li>`;
+        };
+          });
+      }
+      });
+
+      window.onload = () => {
+        courseWrapper1.classList.add('hide');
+        nextBtn.classList.add('hide');
+      };
+    </script>
+  </body>
+</html>
