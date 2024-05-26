@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF514ZKSG0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-PF514ZKSG0');
+    </script>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916042835065059"
+        crossorigin="anonymous"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'G-PF514ZKSG0');
+        </script>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916042835065059"
+            crossorigin="anonymous"></script>
+        <style>
+          body{
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: purple;
+          }
+          .course-wrapper{
+            background-color: white;
+            border: none;
+            border-radius: 6px;
+            max-width: 300px;
+            width: 50%;
+            transition: all 0.3s ease;
+            display: grid;
+            grid-template: column;
+            align-items: center;
+            text-align: center;
+            padding: 6px;
+            position: absolute;
+            top: 20%;
+          }
+          .course-wrapper1{
+            background-color: white;
+            border: none;
+            border-radius: 6px;
+            max-width: 300px;
+            width: 50%;
+            transition: all 0.3s ease;
+            display: grid;
+            grid-template: column;
+            align-items: center;
+            text-align: center;
+            padding: 6px;
+            position: absolute;
+            top: 20%;
+          }
+          .course-wrapper h1{
+            font-size: 24px;
+          }
+          input{
+            width: 90%;
+            padding: 6px;
+            border: none;
+            border-radius: 6px;
+            margin: 6px;
+          }
+          button{
+            background-color: purple;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          button:hover{
+            transform: scale(0.9);
+          }
+          p{
+            font-size: 12px;
+          }
+          .hide{
+            opacity: 0;
+            pointer-events: none;
+          }
+          li{
+            list-style: none;
+            margin: 16px 8px;
+          }
+        </style>
+  </head>
+  <body>
+    <div class="course-wrapper">
+      <h1>CUT Course Calculator</h1>
+      <input type="text" placeholder="English%" class="english-input">
+      <input type="text" placeholder="Life Orientation" class="lo-input">
+      <input type="text" placeholder="Aps Score" class="aps-score">
+      <button class="calculate-button">Calculate</button>
+    </div>
+    <div class="course-wrapper1">
+      <p class="result-text"></p>
+      <p class="result-text1"></p>
+    </div>
+    <script>
+      const englishInput = document.querySelector('.english-input');
+      const loInput = document.querySelector('.lo-input');
+      const apsScore = document.querySelector('.aps-score');
+      const calculateBtn = document.querySelector('.calculate-button');
+      const resultText = document.querySelector('.result-text');
+      const resultText1 = document.querySelector('.result-text1');
+      const resultText2 = document.querySelector('.result-text2');
+      const resultText3 = document.querySelector('.result-text3');
+      const resultText4 = document.querySelector('.result-text4');
+      const resultText5 = document.querySelector('.result-text5');
+      const resultText6 = document.querySelector('.result-text6');
+      const resultText7 = document.querySelector('.result-text7');
+      const resultText8 = document.querySelector('.result-text8');
+      const resultText9 = document.querySelector('.result-text9');
+      const resultText10 = document.querySelector('.result-text10');
+      const courseWrapper = document.querySelector('.course-wrapper');
+      const courseWrapper1 = document.querySelector('.course-wrapper1');
+
+      calculateBtn.addEventListener('click', () => {
+        courseWrapper.classList.add('hide');
+        courseWrapper1.classList.remove('hide');
+        let aps27 = ["Design and Studio Art", "Teacher Education: Languages", "Community Development Work", "Hospitality Management", "Human Resources Management", "Marketing", "Office Management and Technology", "Public Management"];
+        let aps28 = ["Design and Studio Art", "Teacher Education: Languages", "Community Development Work", "Hospitality Management", "Human Resources Management", "Marketing", "Office Management and Technology", "Public Management", "Tourism Management"];
+
+        if (englishInput.value >= 50 && loInput.value >= 50 && apsScore.value == 27 ) {
+          for(let i = 0; i < aps27.length; i++) {
+          resultText.innerHTML += `<li> ${aps27[i]} </li>`;
+        };
+        } else if (englishInput.value >= 50 && loInput.value >= 50 && apsScore.value >= 28 ) {
+          for(let i = 0; i < aps28.length; i++) {
+          resultText.innerHTML += `<li> ${aps28[i]} </li>`;
+        };
+        } else {
+            resultText.innerHTML += `Unfortunately you currently do not qualify for any courses from this institution at the moment.`;
+        }
+      });
+
+      window.onload = () => {
+        courseWrapper1.classList.add('hide');
+      };
+    </script>
+  </body>
+</html>
