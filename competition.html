@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      
+      body{
+        background-color: purple;
+        font-family: Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      p{
+        font-size: 14px;
+      }
+      .header-wrapper{
+        background-color: white;
+        color: purple;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        width: 100%;
+        transition: all 0.3s ease;
+        z-index: 1;
+      }
+      .header-wrapper h1{
+        font-size: 23px;
+        margin-left: 6px;
+      }
+      .info-wrapper{
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        border-radius: 6px;
+        width: 90%;
+        max-width: 600px;
+        padding: 12px;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+      }
+      .jake{
+        width: 50%;
+        border-radius: 25%;
+      }
+      .name-text{
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .color-container{
+        width: 60%;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        margin: 12px;
+      }
+      .color-container1{
+        width: 60%;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+        border-radius: 6px;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        margin: 12px;
+      }
+      .color-wrapper{
+        background-color: rgb(87, 255, 87);
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        padding: 3px;
+        font-size: 12px;
+        font-style: 500;
+      }
+      .color-wrapper1{
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        padding: 3px;
+        font-size: 12px;
+        font-style: 500;
+      }
+      .vote-button{
+        background-color: purple;
+        color: white;
+        padding: 6px;
+        width: 90%;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+      }
+      .vote-button:hover{
+        transform: scale(0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div>
+        <h1>inUni</h1>
+      </div>
+    </div>
+    <div class="info-wrapper">
+      <div class="contestant-wrapper">
+        <img src="FB_IMG_16886826129753649.jpg" class="jake">
+        <p class="name-text">Jake</p>
+        <p>96k votes</p>
+        <div class="color-container">
+          <div class="color-wrapper">80%</div>
+          <div class="color-wrapper1"></div>
+        </div>
+        <a href="https://pay.yoco.com/inuni"><button class="vote-button">Vote</button></a>
+      </div>
+      <div class="contestant-wrapper">
+        <img src="FB_IMG_17010108675118944.jpg" class="jake">
+        <p class="name-text">Fin</p>
+        <p>24k votes</p>
+        <div class="color-container1">
+          <div class="color-wrapper">20%</div>
+          <div class="color-wrapper1"></div>
+        </div>
+        <a href="https://pay.yoco.com/inuni"><button class="vote-button">Vote</button></a>
+      </div>
+    </div>
+    <script>
+      alert(`Only R5 or more is required for your vote to be fully considered and you need to put the contestant's name in the reference column.`);
+    </script>
+  </body>
+</html>
