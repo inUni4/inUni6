@@ -1,0 +1,159 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: arial;
+  margin-top: 150px;
+}
+.header-wrapper{
+  background-color: purple;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.header-wrapper h1{
+  font-size: 23px;
+  margin-left: 6px;
+}
+.subjects-adder{
+  width: 100%;
+  max-width: 500px;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+.subjects-wrapper{
+  width: 100%;
+  max-width: 500px;
+  padding: 6px;
+  border-radius: 6px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+  align-items: center;
+}
+.subject-columns{
+  display: flex;
+  flex-direction: column;
+}
+.subjects-adder button{
+  background-color: purple;
+  color: white;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 80%;
+}
+.subjects-adder p{
+  margin-left: 6px;
+  font-size: 12px;
+}
+.subject{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  padding: 6px;
+}
+.subject p{
+  font-size: 12px;
+}
+input{
+  width: 60%;
+  cursor: pointer;
+}
+.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+.subject-percentages{
+  background-color: white;
+  width: 80%;
+  max-width: 500px;
+  padding: 6px;
+  height: 200px;
+  border-radius: 6px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  position: fixed;
+  top: 10%;
+  overflow-y: scroll;
+  z-index:1;
+}
+.hey{
+  display: flex;
+}
+.subject-percentages input{
+  padding: 6px;
+  width: 90%;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 6px;
+}
+.grey{
+  background-color: rgb(179, 177, 177);
+}
+.superior-wrapper{
+  align-items: center;
+  text-align: center;
+}
+.done-button{
+  background-color: purple;
+  color: white;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 98%;
+}
+.black{
+  background-color: rgba(153, 151, 151, 0.639);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+.calculate-button{
+  background-color: purple;
+  color: white;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 98%;
+}
+.aps-input{
+  border: 1px solid purple;
+  width: 90%;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px;
+  margin: 6px 0;
+}
+li{
+  list-style: none;
+  margin: 6px;
+}
+.bold-text{
+  font-size: 14px;
+  font-weight: bold;
+}
+.total-courses{
+  font-size: bold;
+  font-weight: 500;
+}
