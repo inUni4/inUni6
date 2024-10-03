@@ -1063,7 +1063,7 @@ searchBtn.addEventListener('click', () => {
     <p class="job-text">${sortedJobs[i].job}</p>
     <p class="all-text">Salary : <p class="salary-text">${sortedJobs[i].salary}</p></p>
     <p class="all-text">Centre : <p class="centre-text">${sortedJobs[i].centre}</p></p>
-    <p class="all-text">Closing Date : <p class="closing-text">${sortedJobs[i].closing}</p></p>
+    <p class="all-text">Closing Date : <p class="closing-text">${sortedJobs[i].close}</p></p>
     <p class="all-text">Requirements : <p class="requirement-text">${sortedJobs[i].requirement}</p></p>
     <p class="all-text">Qualifications : <p class="qualification-text">${sortedJobs[i].qualification}</p></p>
     <p class="all-text">Experience : <p class="experience-text">${sortedJobs[i].experience}</p></p>
@@ -1085,7 +1085,7 @@ for(let i = 0; i < jobs.length; i++) {
     <p class="job-text">${jobs[i].job}</p>
     <p class="all-text">Salary : <p class="salary-text">${jobs[i].salary}</p></p>
     <p class="all-text">Centre : <p class="centre-text">${jobs[i].centre}</p></p>
-    <p class="all-text">Closing Date : <p class="closing-text">${jobs[i].closing}</p></p>
+    <p class="all-text">Closing Date : <p class="closing-text">${jobs[i].close}</p></p>
     <p class="all-text">Requirements : <p class="requirement-text">${jobs[i].requirement}</p></p>
     <p class="all-text">Qualifications : <p class="qualification-text">${jobs[i].qualification}</p></p>
     <p class="all-text">Experience : <p class="experience-text">${jobs[i].experience}</p></p>
