@@ -15,104 +15,8 @@
     <meta name="viewport" content="width-device-width, initial-scale=1.0" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3916042835065059"
      crossorigin="anonymous"></script>
-    <style>
-      *{
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: Arial;
-      }
-      .header-wrapper{
-        background-color: purple;
-        color: white;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 20px;
-        width: 100%;
-        transition: all 0.3s ease;
-      }
-      .header-wrapper h1{
-        font-size: 23px;
-        margin-left: 6px;
-      }
-      .customer{
-        width: 80%;
-        border-radius: 60%;
-        margin-top: 15px;
-        margin: 5px;
-        cursor: pointer;
-      }
-      .customer1{
-        width: 50%;
-        margin: 5px;
-        cursor: pointer;
-      }
-      .customer2{
-        width: 80%;
-        margin: 5px;
-        cursor: pointer;
-        margin-left: 15%;
-      }
-      .details-wrapper{
-        margin-top: 80px;
-        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
-        width: 100%;
-        display: grid;
-        grid-template-columns: 10% 50% 40%;
-        align-items: center;
-      }
-      .details-wrapper1{
-        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
-        width: 100%;
-        display: grid;
-        grid-template-columns: 10% 90%;
-        align-items: center;
-      }
-      .details-wrapper1 div{
-        display: inline-block;
-        margin: 6px;
-      }
-      .details{
-        font-size: 12px;
-        font-weight: bold;
-        margin: 4px;
-      }
-      .details1{
-        font-size: 10px;
-        font-weight: bold;
-        margin: 4px;
-        transition: all 0.3s ease;
-      }
-      .name{
-        font-size: 16px;
-        font-weight: bold;
-        margin: 4px;
-      }
-      .accessories {
-        display: grid;
-        grid-template-columns: 34% 34% 34%;
-        justify-content: space-around;
-        align-items: center;
-      }
-      p{
-        font-size: 12px;
-        font-weight: 500;
-      }
-      .hide{
-        opacity: 0;
-        pointer-events: none;
-      }
-      .show{
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .accessories div{
-        text-align: center;
-      }
-    </style>
+     <title>inUni</title>
+    <link rel="stylesheet" href="inUni-home.css">
   </head>
   <body>
     <div class="header-wrapper">
@@ -242,6 +146,17 @@
         <p>Click here for a list of internships.</p>
       </div>
     </div>
+    <div class="details-wrapper1" id="job-wrapper">
+      <div class="image-wrapper">
+        <a href="https://inuni.site/inuni-jobs.html">
+          <img src="job.png" class="customer2">
+        </a>
+      </div>
+      <div>
+        <p class="name">Jobs</p>
+        <p>Click here for a list of jobs.</p>
+      </div>
+    </div>
       <div class="details-wrapper1" id="privacy-wrapper">
       <div class="image-wrapper">
         <a href="https://inuni.site/privacy.html">
@@ -253,50 +168,8 @@
         <p>Click here to view our privacy policy.</p>
       </div>
     </div>
-    <script>
-      const courseCalculator = document.querySelector('#course-calculator');
-      const freePrizes = document.querySelector('#free-prizes');
-      const openUnies = document.querySelector('#open-unies');
-      const calculatorWrapper = document.querySelector('#calculator-wrapper');
-      const giftWrapper = document.querySelector('#gift-wrapper');
-      const uniWrapper = document.querySelector('#uni-wrapper');
-      const tipWrapper = document.querySelector('#tip-wrapper');
-      const freeWrapper = document.querySelector('#free-wrapper');
-      const bursaryWrapper = document.querySelector('#bursary-wrapper');
-      const gameWrapper = document.querySelector('#game-wrapper');
-      const internWrapper = document.querySelector('#intern-wrapper');
-      const privacyWrapper = document.querySelector('#privacy-wrapper');
-
-
-      courseCalculator.addEventListener('click', () => {
-        calculatorWrapper.classList.remove('hide');
-      });
-      freePrizes.addEventListener('click', () => {
-        giftWrapper.classList.remove('hide');
-      });
-      openUnies.addEventListener('click', () => {
-        calculatorWrapper.classList.remove('hide');
-        giftWrapper.classList.remove('hide');
-        uniWrapper.classList.remove('hide');
-        tipWrapper.classList.remove('hide');
-        freeWrapper.classList.remove('hide');
-        bursaryWrapper.classList.remove('hide');
-        gameWrapper.classList.remove('hide');
-        internWrapper.classList.remove('hide');
-        privacyWrapper.classList.remove('hide');
-      });
-
-      window.onload = () => {
-        calculatorWrapper.classList.add('hide');
-        giftWrapper.classList.add('hide');
-        uniWrapper.classList.add('hide');
-        tipWrapper.classList.add('hide');
-        freeWrapper.classList.add('hide');
-        bursaryWrapper.classList.add('hide');
-        gameWrapper.classList.add('hide');
-        internWrapper.classList.add('hide');
-        privacyWrapper.classList.add('hide');
-      }
+    <script src="inUni-home.js">
+      
     </script>
   </body>
 </html>
