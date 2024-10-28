@@ -11,6 +11,8 @@ const courseCalculator = document.querySelector('#course-calculator');
       const internWrapper = document.querySelector('#intern-wrapper');
       const jobWrapper = document.querySelector('#job-wrapper');
       const privacyWrapper = document.querySelector('#privacy-wrapper');
+      const contactWrapper = document.querySelector('#contact-wrapper');
+      const aboutWrapper = document.querySelector('#about-wrapper');
 
 
       courseCalculator.addEventListener('click', () => {
@@ -30,6 +32,8 @@ const courseCalculator = document.querySelector('#course-calculator');
         internWrapper.classList.remove('hide');
         jobWrapper.classList.remove('hide');
         privacyWrapper.classList.remove('hide');
+        contactWrapper.classList.remove('hide');
+        aboutWrapper.classList.remove('hide');
       });
 
       window.onload = () => {
@@ -43,4 +47,6 @@ const courseCalculator = document.querySelector('#course-calculator');
         internWrapper.classList.add('hide');
         jobWrapper.classList.add('hide');
         privacyWrapper.classList.add('hide');
-      }
+        contactWrapper.classList.add('hide');
+        aboutWrapper.classList.add('hide');
+      };
