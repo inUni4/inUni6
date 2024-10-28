@@ -3,6 +3,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6px;
 }
 
 .header-wrapper{
@@ -62,7 +63,7 @@ body{
   border-radius: 6px;
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
   margin-top: 80px;
-  margin-bottom: 6px;
+  margin-bottom: 50px;
 }
 .job-wrapper1{
   display: flex;
@@ -77,9 +78,28 @@ body{
   border-radius: 6px;
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
   margin-top: 40px;
-  margin-bottom: 6px;
   position: absolute;
   top: 20%;
+}
+.saved-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  color: purple;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 6px;
+  border: 1px solid purple;
+  border-radius: 6px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+  margin-top: 40px;
+  margin-bottom: 6px;
+  overflow-y: scroll;
+  position: fixed;
+  top: 20%;
+  bottom: 10%;
 }
 .job-text{
   font-size: 16px;
@@ -162,7 +182,83 @@ body{
 .search-btn:active{
   transform: scale(0.9);
 }
+.inventory-wrapper{
+  background-color: purple;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-content: space-between;
+  transition: all ease 0.3s;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.save-btn{
+  background-color: white;
+  color: purple;
+  width: 80%;
+  border-radius: 6px;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.save-btn:active{
+  transform: scale(0.9);
+}
+.saved-btn{
+  background-color: purple;
+  color: white;
+  border: 1px solid white;
+}
+.inventory-text{
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+.inventory-text1{
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: purple;
+  width: 50%;
+  padding: 6px;
+  text-align: center;
+}
 .hide{
   opacity: 0;
   pointer-events: none;
+}
+.button-wrapper{
+  width: 80%;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+  text-align: center;
+}
+.save-jobs-btn{
+  background-color: white;
+  color: purple;
+  width: 98%;
+  border-radius: 6px;
+  padding: 6px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  margin-left: 60px;
+  transition: all 0.3s ease;
+}
+.save-jobs-btn:active{
+  transform: scale(0.9);
 }
