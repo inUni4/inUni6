@@ -13,6 +13,7 @@ const courseCalculator = document.querySelector('#course-calculator');
       const privacyWrapper = document.querySelector('#privacy-wrapper');
       const contactWrapper = document.querySelector('#contact-wrapper');
       const aboutWrapper = document.querySelector('#about-wrapper');
+      const lateWrapper = document.querySelector('#late-wrapper');
 
 
       courseCalculator.addEventListener('click', () => {
@@ -32,6 +33,7 @@ const courseCalculator = document.querySelector('#course-calculator');
         internWrapper.classList.remove('hide');
         jobWrapper.classList.remove('hide');
         privacyWrapper.classList.remove('hide');
+        lateWrapper.classList.remove('hide');
         contactWrapper.classList.remove('hide');
         aboutWrapper.classList.remove('hide');
       });
@@ -49,4 +51,5 @@ const courseCalculator = document.querySelector('#course-calculator');
         privacyWrapper.classList.add('hide');
         contactWrapper.classList.add('hide');
         aboutWrapper.classList.add('hide');
+        lateWrapper.classList.add('hide');
       };
